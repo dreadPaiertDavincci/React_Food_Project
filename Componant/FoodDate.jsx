@@ -20,7 +20,7 @@ const FoodDate =  [
         CardTitle: " Royale Burger",
         CardParagraph: "turkey salami, and burger relish...",
         CardPrice: "$17.5",
-         count: 1
+        count: 1
     },
 
 ]

@@ -4,7 +4,6 @@ import FoodDate from "../../Componant/FoodDate";
 import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
 import "../Style/Menu.css";
-
 function Menu({ cartItems, setCartItems }) {
    const [selectedFood, setSelectedFood] = useState(null);
 
