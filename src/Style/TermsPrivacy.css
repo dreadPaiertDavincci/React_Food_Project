@@ -1,0 +1,101 @@
+@import "./Theme.css"; 
+.TremsPrivacyPaper {
+  background-color: var(--White_Color);
+  position: relative;
+  height: auto;
+  min-height: 80vh;
+  border-radius: 20px;
+  width: 70%;
+  padding: 50px;
+  margin: 50px 0; 
+  overflow-y: auto; 
+}
+.TremsTitle {
+    padding: 50px;
+    text-align: center;
+    color: var( --Second_Color);
+}
+#PaperTitle {
+    color: var(--Second_Color);
+    position: relative;
+    text-align: center;
+    left: 20px; 
+}
+.HED { 
+    position: relative;
+    left: 25px;
+    top: 10px;
+}
+#Bef { 
+    padding: 15px;
+}
+#Bef::before {
+   content: "▶";
+   margin-right: 10px;
+   color: var(--Second_Color);
+   font-size: 1.2rem;
+   transition: transform 0.3s ease;
+}
+.TEXTList { 
+    color: var(--gray_Color);
+}
+#TE-Item::marker {
+    color: var(--Second_Color);
+}
+#TEX  { 
+    color: var(--gray_Color);
+}
+.Virtical-Line {
+   position: relative;
+   left: 50%;
+   transform: translate(-50%);
+    height: 2px; 
+    margin-top: 50px;
+    background-color: var(--Second_Color);
+    width: 80%;
+}
+#PaperTitle2 {
+    padding: 15px;
+    text-align: center;
+     color: var(--Second_Color);
+}
+.TrimsContactInfo { 
+    position: relative;
+    left: 50%; 
+    transform: translate(-50%);
+    margin-top: 50px ;
+    border: solid 2px var(--gray_Color);
+    height: 260px ;
+    width: 550px; 
+    border-radius: 20px;
+}
+#ContInfo2 { 
+    text-align: center;
+    padding: 10px; 
+}
+#ContInfo { 
+    padding: 10px;
+    text-align: center;
+    color: var(--Second_Color);
+}
+#linkTrim { 
+    position: relative;
+    left:200px;    
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--gray_Color);
+    line-height: 40px;
+
+}
+#siteTrim {
+     font-weight: bolder;
+     text-align: center;
+    color: var(--gray_Color);
+
+}
+#copyRight {
+    position: relative;
+    top: 30px;
+    color: var(--gray_Color);
+    text-align: center;
+}

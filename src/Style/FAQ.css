@@ -1,0 +1,24 @@
+@import "./Theme.css"; 
+.FAQContinar { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.FAQImage {
+    width: 500px;
+}
+#FAQTI { 
+    font-size: 50px;
+    position: relative;
+    top: 100px;
+    right: 30px;
+
+}
+.ImageTitle {
+  
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,132 @@
+@import "./Theme.css"; 
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.login-modal {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  max-width: 90%;
+  position: relative;
+  animation: zoomIn 0.3s ease forwards;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.InputBoxN {
+    width: 100%;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.login-form #ShIn {
+    width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+.login-form #ShIn:focus {
+  border-color: var(--Second_Color);
+  outline: none;
+}
+
+.login-form .Showbtn {
+  padding: 12px;
+  width: 100%;
+  background-color: var(--Second_Color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-form .Showbtn:hover {
+  background-color: #e69500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.SignUpLine { 
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    height: 2px;
+    width: 80%;
+    background-color: var( --gray_Color);
+}
+#SGTitke { 
+    text-align: center;
+}
+#SignOR { 
+    width: 25px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 25px;
+    z-index: 1;
+   text-align: center;
+  background-color: var(--White_Color);
+}
+
+.Social { 
+    display: flex;
+    justify-content: space-around;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

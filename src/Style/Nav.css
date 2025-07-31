@@ -1,0 +1,146 @@
+@import "./Theme.css"; 
+
+.main-nav {
+  background-color: var(--Parent_Color);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+  height: 100px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 998;
+}
+
+#CartLink {
+  color: var(--font_Color);
+}
+
+.ul-nav {
+     display: flex;
+     width: 500px;
+     justify-content: space-around;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+#LinkRouter { 
+  font-weight: 700; 
+  text-decoration: none;
+  font-size: 17px;
+  transition: .5s;
+  color: var(--font_Color);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+#LinkRouter:hover {
+  color: var(--Second_Color);
+}
+.dropdown-arrow {
+  margin-left: 8px;
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-item .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: var(--White_Color);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  min-width: 180px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 999;
+  margin: 0;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown #subId {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.dropdown #subId .subLink {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--font_Color);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.dropdown #subId .subLink:hover {
+  background-color: #f8f9fa;
+  color: var(--Second_Color);
+  transform: translateX(5px);
+}
+.cartFavurateLogInContinar {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
+#Logo {
+  color: var(--Second_Color);
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 0;
+}
+
+.IconC {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#iconspan {
+  position: absolute;
+  top: 5px; 
+  right: -5px; 
+  background-color: var(--Second_Color);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}

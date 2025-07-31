@@ -1,0 +1,159 @@
+@import "./Theme.css";
+.side-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--Second_Color);
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+.ItemsContinar {
+  position: relative;
+  top: 40px;
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(13, 13, 13, 0.303);
+}
+
+.ImageBar {
+  width: 80px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ddd;
+  border-radius: 6px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ImageBAr { 
+  width: 80px;
+}
+
+.TitleBar {
+ width: 150px;;
+}
+#paragraphBar {
+  position: relative;
+  top: 10px;
+  font-size: 12px;
+}
+#PriceBar { 
+  position: relative; 
+  left: 2px;
+  bottom: 7px;
+}
+.CounterBar {
+  position:relative;
+  left: 5px;
+  width: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 5px;
+}
+
+.TotalPriceContinar {
+  position: relative;
+  top: 5px;
+  width: 170px;
+  display: flex;
+
+}
+#TotolParagraph { 
+  font-weight: bolder; 
+  font-size: 16px;
+}
+.totalPriceSpan {
+  position: relative;
+  left: 10px;
+  color: var(--Second_Color);
+}
+.MiBarbtn {
+    outline: none;
+    border: none;
+    height: 20px;
+    width: 20px; 
+    border-radius: 5px;
+    transition: .5s;
+
+}
+.MiBarbtn:hover {
+    background-color: var(--Second_Color);
+} 
+#CounBar {
+  font-size: 18px;
+}
+
+.DeletButtonBar {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  transition: color 0.2s ease;
+}
+
+
+.completed {
+  padding-top: 10px;
+}
+
+.completed #barButton {
+  width: 100%;
+  background-color: var(--Second_Color);
+  color: var(--White_Color);
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@keyframes slideIn {
+  from {
+    right: -340px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+
