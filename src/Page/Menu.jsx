@@ -5,25 +5,18 @@ import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
 import "../Style/Menu.css";
 import { AnimatePresence, motion } from "framer-motion";
-
-
 function Menu({ cartItems, setCartItems }) {
   const [selectedFood, setSelectedFood] = useState(null);
   const [foodcategory, setFoodCategory] = useState("pizza");
-
   const handleFilterCard = (category) => {
     setFoodCategory(category);
   };
-
-  // ✅ الفلترة تعرض فقط الأصناف حسب التصنيف المختار
   const filterFood = FoodDate.filter((food) =>
     food.category === foodcategory
   );
-
   const handleCardClick = (food) => {
     setSelectedFood(food);
   };
-
   const handleAddToCart = (food) => {
     setCartItems((prevItems) => {
       const exist = prevItems.find(
@@ -40,7 +33,6 @@ function Menu({ cartItems, setCartItems }) {
       }
     });
   };
-
   return (
     <section className="MenuSection">
       <div className="ImagesGridContinar">
