@@ -36,14 +36,15 @@
 }
 .P404Section {
   background-color: var(--Parent_Color);
-  height: auto;  
-min-height: 100vh;
+  height: auto;
+   min-height: 100vh;
 }
 .TermsPrivacySection {
-
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--Parent_Color);
-height: auto;  
-min-height: 100vh;
+  height: auto;  
+  min-height: 100vh;
 }
