@@ -4,6 +4,8 @@ import FoodDate from "../../Componant/FoodDate";
 import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
 import "../Style/Menu.css";
+import { AnimatePresence, motion } from "framer-motion";
+
 
 function Menu({ cartItems, setCartItems }) {
   const [selectedFood, setSelectedFood] = useState(null);
@@ -117,15 +119,24 @@ function Menu({ cartItems, setCartItems }) {
         </div>
       </div>
 
-      <div className="FilterCardContinar">
-        {filterFood.map((food, index) => (
-          <FoodCard
-            key={index}
-            {...food}
-            onClick={() => handleCardClick(food)}
-            onAddToCart={() => handleAddToCart(food)}
-          />
-        ))}
+    <div className="FilterCardContinar">
+      <AnimatePresence mode="wait">
+         {filterFood.map((food, index) => (
+           <motion.div
+             key={food.CardTitle}
+             initial={{ opacity: 0, y: 50 }}
+             animate={{ opacity: 1, y: 0 }}
+             exit={{ opacity: 0, y: -30 }}
+             transition={{ duration: 0.4, delay: index * 0.05 }}
+            >
+             <FoodCard
+              {...food}
+              onClick={() => handleCardClick(food)}
+              onAddToCart={() => handleAddToCart(food)}
+            />
+         </motion.div>
+          ))}
+          </AnimatePresence>
       </div>
 
       <CardShowPage
