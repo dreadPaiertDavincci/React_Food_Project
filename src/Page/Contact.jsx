@@ -34,7 +34,17 @@ function Contact(){
               <div className="ContactContinar">
                 <div className="MpaInfoContinar">
                     <div className="MAP"> 
-                        <div className="overlay-text">Our Site</div>               
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12043.055030011612!2d28.82472155!3d41.00854369999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2str!4v1754131815289!5m2!1sar!2str"
+                            width="600"
+                            height="300"
+                            style={{ border: "0" }}
+                            allowFullScreen=""
+                            loading="eager"
+                            //أرسل معلومات المصدر (referrer) فقط إذا كان الرابط الجديد يستخدم بروتوكول آمن (HTTPS).
+                            //هذا مفيد لأسباب أمنية وخصوصية، خاصة عند التعامل مع خدمات مثل خرائط Google.
+                            referrerPolicy="no-referrer-when-downgrade" // إذا كان الرابط غير آمن (HTTP)، لا يتم إرسال referrer.
+                        ></iframe>              
                     </div>
                     <div className="Info">         
                         <div className="LineFONT">

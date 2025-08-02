@@ -1,2 +1,1 @@
-eğer sepete ekledyisem alert çıksı onu yapmadım ve hem show card içinde button var on aynı methodu vereceğim 
-total price ekleyeceğim; 
+Tahiyati 
