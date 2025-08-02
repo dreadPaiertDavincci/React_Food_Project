@@ -130,7 +130,6 @@ function Menu({ cartItems, setCartItems }) {
           ))}
           </AnimatePresence>
       </div>
-
       <CardShowPage
         food={selectedFood}
         onClose={() => setSelectedFood(null)}
