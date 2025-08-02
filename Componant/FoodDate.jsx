@@ -145,6 +145,152 @@ const FoodDate =  [
         category: "Oriental food",
         count: 1  
     },
+    /////////////////////////Authority///////////////////////////7
+    {
+        ImagePath: "../public/AuthorityImages/s1.jpg",
+        CardTitle: "Tabbouleh",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "1$",
+        category: "Authority",
+        count: 1    
+    },
+    {
+        ImagePath: "../public/AuthorityImages/s2.jpg",
+        CardTitle: "Chicken Pasta Salad",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "4$",
+        category: "Authority",
+        count: 1  
+    },
+    {
+        ImagePath: "../public/AuthorityImages/s3.jpg",
+        CardTitle: "Caesar Salad",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "8$",
+        category: "Authority",
+        count: 1  
+    },
+      {
+        ImagePath: "../public/AuthorityImages/s4.jpg",
+        CardTitle: "Fattoush",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "2$",
+        category: "Authority",
+        count: 1  
+    },
+      {
+        ImagePath: "../public/AuthorityImages/s5.jpg",
+        CardTitle: "Oriental Salad",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "1.5$",
+        category: "Authority"
+    },
+      {
+      ImagePath: "../public/AuthorityImages/s6.jpg",
+        CardTitle: "Rocket",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "2$",
+        category: "Authority",
+        count: 1  
+    },
+    ////////////////////Drinks/////////////////////////
+
+     {
+        ImagePath: "../public/DrinksImages/d1.jpg",
+        CardTitle: "Ice Tea",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "0.25$",
+        category: "drinks",
+        count: 1    
+    },
+    {
+        ImagePath: "../public/DrinksImages/d2.jpg",
+        CardTitle: "Water",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "4$",
+        category: "drinks",
+        count: 1  
+    },
+    {
+        ImagePath: "../public/DrinksImages/d3.jpg",
+        CardTitle: "Fanta",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "1$",
+        category: "drinks",
+        count: 1  
+    },
+      {
+        ImagePath: "../public/DrinksImages/d4.jpg",
+        CardTitle: "Ayran",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "0.5$",
+        category: "drinks",
+        count: 1  
+    },
+      {
+        ImagePath: "../public/DrinksImages/d5.jpg",
+        CardTitle: "Coca-Cola",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "1.5$",
+        category: "drinks"
+    },
+      {
+      ImagePath: "../public/DrinksImages/d6.jpg",
+        CardTitle: "Soda",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "2$",
+        category: "drinks",
+        count: 1  
+    },
+      ////////////////////Candies/////////////////////////
+
+     {
+        ImagePath: "../public/CandiesImages/ca1.jpg",
+        CardTitle: "Pumpkin Walnut Cake",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "10$",
+        category: "Candies",
+        count: 1    
+    },
+    {
+        ImagePath: "../public/CandiesImages/ca2.jpg",
+        CardTitle: "Tiramisu",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "12$",
+        category: "Candies",
+        count: 1  
+    },
+    {
+        ImagePath: "../public/CandiesImages/ca3.jpg",
+        CardTitle: "Fruit Yogurt Parfait",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "13$",
+        category: "Candies",
+        count: 1  
+    },
+      {
+        ImagePath: "../public/CandiesImages/ca4.jpg",
+        CardTitle: "Mixed Berry Shortcake",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "25$",
+        category: "Candies",
+        count: 1  
+    },
+      {
+        ImagePath: "../public/CandiesImages/ca5.jpg",
+        CardTitle: "Chocolate Lasagna",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "15$",
+        category: "Candies",
+    },
+      {
+      ImagePath: "../public/CandiesImages/ca6.jpg",
+        CardTitle: "Mixed Berry Cheesecake",
+        CardParagraph: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        CardPrice: "21$",
+        category: "Candies",
+        count: 1  
+    },
 
 
 ]
