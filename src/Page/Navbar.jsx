@@ -5,19 +5,15 @@ import ShowLogInPage from "../../Componant/ShowLogInPage";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CartPage from "./CartPage";
-
 function NavBar({ cartItems, setCartItems }) { 
     const [showCartBar , setShowCartBar] = useState(false); 
     const [showLogin, setShowLogin] = useState(false);
-
     const cartToggle = () => {
         setShowCartBar(!showCartBar);
     }
-
     const ToggleShowPage = () => { 
         setShowLogin(!showLogin);
     }
-
     const navItem = [
         {name: "Home", path:"/"},
         {name: "About", path:"/about"},
@@ -30,7 +26,6 @@ function NavBar({ cartItems, setCartItems }) {
             {name: "TermsPrivacy" , path:"/termsprivacy"}
         ]},
     ];
-
     const LoopNav = navItem.map((e, navIndex)=> { 
         return(
            <li key={navIndex} className={`nav-item ${e.subPage ? 'has-dropdown' : ''}`}>
