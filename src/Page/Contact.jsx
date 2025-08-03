@@ -3,14 +3,13 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "../Style/Contact.css"; 
 import { useRef, useState } from "react";
-function Contact(){
 
-    const userNameRef  =  useRef(null);
-    const emaliRef     =  useRef(null);
-    const websiteRef   =  useRef(null);
-    const messageRef   =  useRef(null);
-    
-    const[Date , setDate] = useState({userName: "" , Email:"" , website:"" , message :""});
+function Contact(){
+    const userNameRef       =  useRef(null);
+    const emaliRef          =  useRef(null);
+    const websiteRef        =  useRef(null);
+    const messageRef        =  useRef(null);
+    const[Date , setDate]   = useState({userName: "" , Email:"" , website:"" , message :""});
     const handleChang = (e) => {
         const{name, value} = e.target; 
         setDate({...Date , [name]: value});
