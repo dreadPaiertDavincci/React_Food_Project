@@ -4,13 +4,13 @@ import { MdEmail } from "react-icons/md";
 import "../Style/Contact.css"; 
 import { useRef, useState } from "react";
 function Contact(){
-    const userNameRef = useRef(null);
-    const emaliRef = useRef(null);
-    const websiteRef = useRef(null);
-    const messageRef = useRef(null);
-    const[Date , setDate] = useState(
-        {userName: "" , Email:"" , website:"" , message :""},  
-    );
+
+    const userNameRef  =  useRef(null);
+    const emaliRef     =  useRef(null);
+    const websiteRef   =  useRef(null);
+    const messageRef   =  useRef(null);
+    
+    const[Date , setDate] = useState({userName: "" , Email:"" , website:"" , message :""});
     const handleChang = (e) => {
         const{name, value} = e.target; 
         setDate({...Date , [name]: value});
@@ -26,10 +26,11 @@ function Contact(){
         if(emaliRef.current)    emaliRef.current = "";
         if(websiteRef.current)  websiteRef.current = "";
         if(messageRef.current)  messageRef.current = "";
-        setDate({userName: "" , Email:"" , website:"" , message :""})  ;
+        setDate({userName: "" , Email:"" , website:"" , message :""});
     }
     return(
            <section className="ContactSection">
+            
               <h1 id="CoTitle">Contact Us</h1>
               <div className="ContactContinar">
                 <div className="MpaInfoContinar">
@@ -73,10 +74,13 @@ function Contact(){
                         <p id="FieldParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Ratione necessitatibus,</p>
                         <div className="InputBoxContinar">
+
+
                             <form onSubmit={handleSubmit}>
                             <div className="Input-box">
                                 <input type="text" 
                                 name="userName"
+                                ref={userNameRef}
                                 value={Date.userName} 
                                 onChange={handleChang}
                                 id="inputField" 
@@ -84,6 +88,7 @@ function Contact(){
                             </div>
                             <div className="Input-box">
                                 <input type="text" 
+                                ref={emaliRef}
                                 name="Email" 
                                 value={Date.Email}
                                 onChange={handleChang}
@@ -93,6 +98,7 @@ function Contact(){
                             </div>
                             <div className="Input-box">
                                 <input type="text" 
+                                ref={websiteRef}
                                 name="website"
                                 value={Date.website} 
                                 onChange={handleChang}
@@ -103,6 +109,7 @@ function Contact(){
                                 <textarea name="message" 
                                 value={Date.message} 
                                 id="AreaFiled" 
+                                ref={messageRef}
                                 placeholder="Message"
                                 onChange={handleChang} 
                                 ></textarea>

@@ -1,7 +1,7 @@
 function Footer(){ 
     return(
-        <section className=""> 
-         <h1>Footer</h1> 
-        </section>
+        <footer className=""> 
+          <h1>Footer</h1> 
+        </footer>
     ); 
 }

@@ -7,15 +7,23 @@ import { useState } from "react";
 import CartPage from "./CartPage";
 function NavBar({ cartItems, setCartItems }) { 
     const [showCartBar , setShowCartBar] = useState(false); 
+
+
     const [showLogin, setShowLogin] = useState(false);
-    const cartToggle = () => {
+
+
+    const cartToggle = () => { 
         setShowCartBar(!showCartBar);
     }
+
+
+
+    
     const ToggleShowPage = () => { 
         setShowLogin(!showLogin);
     }
     const navItem = [
-        {name: "Home", path:"/"},
+        {name: "Home", path : "/"},
         {name: "About", path:"/about"},
         {name: "Menu", path: "/menu"},
         {name: "Blog" , path: "/blog"},
@@ -26,7 +34,7 @@ function NavBar({ cartItems, setCartItems }) {
             {name: "TermsPrivacy" , path:"/termsprivacy"}
         ]},
     ];
-    const LoopNav = navItem.map((e, navIndex)=> { 
+    const LoopNav = navItem.map((e, navIndex) => { 
         return(
            <li key={navIndex} className={`nav-item ${e.subPage ? 'has-dropdown' : ''}`}>
              <Link to={e.path} id="LinkRouter" className="nav-link">
@@ -47,7 +55,7 @@ function NavBar({ cartItems, setCartItems }) {
     });
     const totalCount = cartItems.reduce((acc, item) => acc + item.count, 0);
     return(
-        <> 
+    <>
         <nav className="main-nav">
            <h1 id="Logo">Logo</h1>
             <ul className="ul-nav">
@@ -58,13 +66,21 @@ function NavBar({ cartItems, setCartItems }) {
                   <FaCartShopping />
                   <span id="iconspan">{totalCount}</span> 
                </div>
-              
                <div className="IconC" onClick={ToggleShowPage}>
                  <FaUserPlus />
                </div>
             </div>
+            
+
         </nav>
+
        {showLogin && <ShowLogInPage onClose={ToggleShowPage} />} 
+
+
+
+
+
+
        {showCartBar && <CartPage cartItems={cartItems} setCartItems={setCartItems} onClose={cartToggle} />} 
      </>
     );

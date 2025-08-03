@@ -6,7 +6,6 @@ import { useState } from "react";
 function CardShowPage({ food, onClose , onAddToCart  }) {
     const [Count, setCount] = useState(1);
     const [isClosing, setIsClosing] = useState(false);
-
     
     const handleClose = () => {
     setIsClosing(true);
@@ -50,7 +49,6 @@ function CardShowPage({ food, onClose , onAddToCart  }) {
                 <img src={food.ImagePath} alt={food.CardTitle} className="modal-image" />
                 <h2>{food.CardTitle}</h2>
                 <p>{food.CardParagraph}</p>
-
                 <div className="price-section">
                     <p><strong>Original price : </strong> {unitPrice.toFixed(2)} $</p>
                     <p><strong>Total Price : </strong> {totalPrice.toFixed(2)} $</p>
@@ -61,9 +59,9 @@ function CardShowPage({ food, onClose , onAddToCart  }) {
                     <p className="CounterResult">{Count}</p>
                     <button className="plusBtn" onClick={plusCounter}>+</button>
                 </div>
+
                 <div className="SizeFoodContinar"> 
                     <SizeFood />
-                     
                 </div>
 
                 <button className="add-to-cart-btn2" onClick={handleAdd}>Add to Cart</button>

@@ -1,16 +1,19 @@
-import ImageSlider from "../../Componant/ImageSlider";
 import FoodCard from "../../Componant/FoodCard";
 import FoodDate from "../../Componant/FoodDate";
 import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
 import "../Style/Menu.css";
 import { AnimatePresence, motion } from "framer-motion";
+import ImageSlider from "../../Componant/ImageSlider";
 function Menu({ cartItems, setCartItems }) {
+
   const [selectedFood, setSelectedFood] = useState(null);
+
   const [foodcategory, setFoodCategory] = useState("pizza");
   const handleFilterCard = (category) => {
     setFoodCategory(category);
   };
+
   const filterFood = FoodDate.filter((food) =>
     food.category === foodcategory
   );
@@ -77,13 +80,7 @@ function Menu({ cartItems, setCartItems }) {
           </div>
           <div className="vertical-line"></div>
           <div className="FB">
-            <i
-              className={`bxr bx-bowl-rice ${
-                foodcategory === "Authority" ? "active-icon" : ""
-              }`}
-              onClick={() => handleFilterCard("Authority")}
-              id="foodCateg"
-            ></i>
+            <i className={`bxr bx-bowl-rice ${foodcategory === "Authority" ? "active-icon" : ""}`} onClick={() => handleFilterCard("Authority")}id="foodCateg"></i>
             <span id="FodSpan">Authority</span>
           </div>
           <div className="vertical-line"></div>
@@ -113,6 +110,7 @@ function Menu({ cartItems, setCartItems }) {
 
     <div className="FilterCardContinar">
       <AnimatePresence mode="wait">
+
          {filterFood.map((food, index) => (
            <motion.div
              key={food.CardTitle}
@@ -130,13 +128,20 @@ function Menu({ cartItems, setCartItems }) {
           ))}
           </AnimatePresence>
       </div>
+
+
+
       <CardShowPage
-        food={selectedFood}
+        food = {selectedFood}
         onClose={() => setSelectedFood(null)}
         onAddToCart={handleAddToCart}
       />
+
+
+
+
+
     </section>
   );
 }
-
 export default Menu;

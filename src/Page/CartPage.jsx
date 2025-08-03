@@ -2,6 +2,9 @@ import "../Style/CartShow.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 import { useState } from "react";
+
+
+
 function CartPage({ cartItems, setCartItems, onClose }) {
     const[colse , setClose]   = useState(false); 
           const handleClose = () => {
