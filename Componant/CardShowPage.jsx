@@ -5,6 +5,16 @@ import { useState } from "react";
 
 function CardShowPage({ food, onClose , onAddToCart  }) {
     const [Count, setCount] = useState(1);
+    const [isClosing, setIsClosing] = useState(false);
+
+    
+    const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+        onClose();
+        setIsClosing(false);
+    }, 200); 
+};
 
     useEffect(() => {
         setCount(1);
@@ -34,9 +44,9 @@ function CardShowPage({ food, onClose , onAddToCart  }) {
     const unitPrice = parseFloat(food.CardPrice.replace(/[^\d.]/g, "")) || 0;
     const totalPrice = unitPrice * Count;
     return (
-        <div className="modal-overlay2" onClick={onClose}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="close-button" onClick={onClose}>×</button>
+        <div className="modal-overlay2" onClick={handleClose}>
+          <div className={`modal-content ${isClosing ? "fade-out" : ""}`} onClick={(e) => e.stopPropagation()}>
+             <button className="close-button" onClick={handleClose}>×</button>
                 <img src={food.ImagePath} alt={food.CardTitle} className="modal-image" />
                 <h2>{food.CardTitle}</h2>
                 <p>{food.CardParagraph}</p>

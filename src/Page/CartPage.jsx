@@ -1,7 +1,16 @@
 import "../Style/CartShow.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
+import { useState } from "react";
 function CartPage({ cartItems, setCartItems, onClose }) {
+    const[colse , setClose]   = useState(false); 
+          const handleClose = () => {
+          setClose(true);
+          setTimeout(() => {
+          onClose();
+          setClose(false);
+        }, 200); 
+      };
   const handleIncrement = (title) => {
     setCartItems((prev) =>
       prev.map((item) => 
@@ -27,13 +36,13 @@ function CartPage({ cartItems, setCartItems, onClose }) {
   return acc + price * item.count;
 }, 0);
   return (
-    <div className="side-cart">
+    <div className={`side-cart ${colse ? "slide-out" : ""}`}>
       <div className="TotalPriceContinar">
         <p id="TotolParagraph">Total Price:</p>
         <span className="totalPriceSpan">{totalPrice.toFixed(2)}$</span>
       </div>
-      <button className="close-btn" onClick={onClose}>
-        <FiArrowRightCircle />
+      <button className="close-btn" onClick={handleClose}>
+          <FiArrowRightCircle />
       </button>
       <div className="ItemsContinar">
         {cartItems.length === 0 && <p>Your cart is empty.</p>}

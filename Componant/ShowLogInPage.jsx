@@ -2,6 +2,15 @@ import { useRef, useState } from "react";
 import "../src/Style/ShowLogInPage.css";
 import SocialMeda from "./SocialMeda";
 function ShowLogInPage({ onClose }) {
+
+    const[colse , setClose]   = useState(false); 
+        const handleClose = () => {
+        setClose(true);
+        setTimeout(() => {
+        onClose();
+        setClose(false);
+      }, 150); 
+    };
     const [ShowDate ,setShowDate]  =useState({userName: "" , email: "" ,password: ""});
     const userNameRef = useRef(null); 
     const emailRef= useRef(null);
@@ -26,8 +35,8 @@ function ShowLogInPage({ onClose }) {
     }; 
   return (
     <div className="modal-overlay">
-      <div className="login-modal">
-        <button className="close-btn" onClick={onClose}>&times;</button>
+       <div className={`login-modal ${colse ? "fade-out" : ""}`}>
+        <button className="close-btn" onClick={handleClose}>&times;</button>
         <h2 id="SGTitke">Sign Up</h2>
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="InputBoxN">
