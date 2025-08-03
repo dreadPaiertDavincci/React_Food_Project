@@ -156,4 +156,17 @@
   }
 }
 
+@keyframes slideOut {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -340px;
+    opacity: 0;
+  }
+}
 
+.slide-out {
+  animation: slideOut 0.2s ease forwards;
+}

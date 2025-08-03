@@ -1,4 +1,3 @@
-import { colors } from "@mui/material";
 import Stack from '@mui/material/Stack';
 
 import "../Style/TermsPrivacy.css";
@@ -7,6 +6,13 @@ function TermsPrivacy(){
     return(
        
             <section className="TermsPrivacySection">
+
+                <div className="HeadConTri">
+                    <h1 id='trimPol'>Terms&Privacy</h1>
+                </div>
+                <div className='TrimHiddenButton'>
+                    Terms&Privacy
+                </div>
 
                 <div className="TremsPrivacyPaper">
                     <div className="TremsTitle">

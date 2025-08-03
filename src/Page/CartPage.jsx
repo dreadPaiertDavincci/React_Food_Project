@@ -1,16 +1,26 @@
 import "../Style/CartShow.css";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
+import { useState } from "react";
+
+
 
 function CartPage({ cartItems, setCartItems, onClose }) {
+    const[colse , setClose]   = useState(false); 
+          const handleClose = () => {
+          setClose(true);
+          setTimeout(() => {
+          onClose();
+          setClose(false);
+        }, 200); 
+      };
   const handleIncrement = (title) => {
     setCartItems((prev) =>
-      prev.map((item) =>
+      prev.map((item) => 
         item.CardTitle === title ? { ...item, count: item.count + 1 } : item
       )
     );
   };
-
   const handleDecrement = (title) => {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -20,28 +30,23 @@ function CartPage({ cartItems, setCartItems, onClose }) {
       )
     );
   };
-
   const handleRemove = (title) => {
     setCartItems((prev) => prev.filter((item) => item.CardTitle !== title));
   };
-
  const totalPrice = cartItems.reduce((acc, item) => {
   const priceString = item.CardPrice.replace("$", ""); 
   const price = parseFloat(priceString) || 0; 
   return acc + price * item.count;
 }, 0);
-
   return (
-    <div className="side-cart">
+    <div className={`side-cart ${colse ? "slide-out" : ""}`}>
       <div className="TotalPriceContinar">
         <p id="TotolParagraph">Total Price:</p>
         <span className="totalPriceSpan">{totalPrice.toFixed(2)}$</span>
       </div>
-
-      <button className="close-btn" onClick={onClose}>
-        <FiArrowRightCircle />
+      <button className="close-btn" onClick={handleClose}>
+          <FiArrowRightCircle />
       </button>
-
       <div className="ItemsContinar">
         {cartItems.length === 0 && <p>Your cart is empty.</p>}
         {cartItems.map((item) => (
@@ -81,7 +86,6 @@ function CartPage({ cartItems, setCartItems, onClose }) {
           </div>
         ))}
       </div>
-
       <div className="completed">
         <form action="" onClick={(e) => e.preventDefault()}>
           <button id="barButton" type="submit">
