@@ -17,7 +17,6 @@ function TermsPrivacy(){
                 <div className="TremsPrivacyPaper">
                     <div className="TremsTitle">
                         <h1 id="TremsIDTi">Terms & Conditions and Privacy Policy</h1>
-                        <p id="TremsParagID">Lorem, ipsum dolor sit amet consectetur adipisicing elit. , porro.</p>
                     </div>
 
                     <div className="TremsConditionCon">
