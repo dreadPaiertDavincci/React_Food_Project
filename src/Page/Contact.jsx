@@ -43,7 +43,7 @@ function Contact(){
                             loading="eager"
                             //أرسل معلومات المصدر (referrer) فقط إذا كان الرابط الجديد يستخدم بروتوكول آمن (HTTPS).
                             //هذا مفيد لأسباب أمنية وخصوصية، خاصة عند التعامل مع خدمات مثل خرائط Google.
-                            referrerPolicy="no-referrer-when-downgrade" // إذا كان الرابط غير آمن (HTTP)، لا يتم إرسال referrer.
+                            referrerPolicy="no-referrer-when-downgrade" // إذا كان الرابط غير آمن (HTTP)، لا يتم إرسال referrer
                         ></iframe>              
                     </div>
                     <div className="Info">         
