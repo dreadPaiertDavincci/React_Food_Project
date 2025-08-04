@@ -1,5 +1,4 @@
 import Stack from '@mui/material/Stack';
-
 import "../Style/TermsPrivacy.css";
 import Alert from '@mui/material/Alert';
 function TermsPrivacy(){ 

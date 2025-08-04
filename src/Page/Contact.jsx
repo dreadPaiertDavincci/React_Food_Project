@@ -5,11 +5,11 @@ import "../Style/Contact.css";
 import { useRef, useState } from "react";
 
 function Contact(){
-    const userNameRef       =  useRef(null);
-    const emaliRef          =  useRef(null);
-    const websiteRef        =  useRef(null);
-    const messageRef        =  useRef(null);
-    const[Date , setDate]   = useState({userName: "" , Email:"" , website:"" , message :""});
+    const userNameRef  =  useRef(null);
+    const emaliRef   =  useRef(null);
+    const websiteRef   =  useRef(null);
+    const messageRef =  useRef(null);
+    const[Date , setDate]= useState({userName: "" , Email:"" , website:"" , message :""});
     const handleChang = (e) => {
         const{name, value} = e.target; 
         setDate({...Date , [name]: value});
@@ -29,7 +29,6 @@ function Contact(){
     }
     return(
            <section className="ContactSection">
-            
               <h1 id="CoTitle">Contact Us</h1>
               <div className="ContactContinar">
                 <div className="MpaInfoContinar">
