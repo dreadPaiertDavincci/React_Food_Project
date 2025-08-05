@@ -106,7 +106,8 @@ function App() {
 
 export default App; 
 ////////////////////////////////////////////////////////////////
-// Scroll Animation 
+
+// Scroll Animation  (360deg); Rotate   
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './ScrollShapes.css'; // نفس CSS السابق
@@ -141,6 +142,49 @@ const Ani: React.FC = () => {
 
       <section className="section">
         <h2>🌀 كل ما تنزل... العناصر تلتف تدريجيًا</h2>
+      </section>
+    </div>
+  );
+};
+
+export default Ani;
+//////////////////////////////////////////////////////////
+scroll Animation (x, y, z)
+
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import './ScrollShapes.css'; // تأكد من المسار الصحيح
+
+const Ani: React.FC = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  // تحريك أفقي من اليسار لليمين حسب نسبة السكرول
+  const moveX1 = useTransform(scrollYProgress, [0, 1], ["-200px", "200px"]);
+  const moveX2 = useTransform(scrollYProgress, [0, 1], ["200px", "-200px"]);
+
+  return (
+    <div ref={targetRef} className="scroll-page">
+      <section className="section">
+        <h2>🎯 حركة يمين ويسار مع Scroll</h2>
+      </section>
+
+      <section className="section">
+        <motion.div
+          className="shape circle"
+          style={{ x: moveX1 }}
+        />
+        <motion.div
+          className="shape square"
+          style={{ x: moveX2 }}
+        />
+      </section>
+
+      <section className="section">
+        <h2>🌀 كل ما تنزل... العناصر تتحرك يمين ويسار</h2>
       </section>
     </div>
   );
