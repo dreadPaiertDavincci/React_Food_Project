@@ -1,3 +1,4 @@
+// Page Translat Animation
 import "./App.css";
 import NavBar from "./Page/NavBar"; 
 import Home from "./Page/Home";
@@ -104,3 +105,45 @@ function App() {
 }
 
 export default App; 
+////////////////////////////////////////////////////////////////
+// Scroll Animation 
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import './ScrollShapes.css'; // نفس CSS السابق
+
+const Ani: React.FC = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"], // تابع العنصر الكامل
+  });
+
+  // الزاوية من 0 إلى 360 حسب التمرير
+  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 90]);
+  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, 180]);
+
+  return (
+    <div ref={targetRef} className="scroll-page">
+      <section className="section">
+        <h2>🎯 دوران حسب Framer Motion Scroll</h2>
+      </section>
+
+      <section className="section">
+        <motion.div
+          className="shape circle"
+          style={{ rotate: rotate1 }}
+        />
+        <motion.div
+          className="shape square"
+          style={{ rotate: rotate2 }}
+        />
+      </section>
+
+      <section className="section">
+        <h2>🌀 كل ما تنزل... العناصر تلتف تدريجيًا</h2>
+      </section>
+    </div>
+  );
+};
+
+export default Ani;
