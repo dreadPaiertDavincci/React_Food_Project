@@ -12,9 +12,16 @@
   top: 0;
   z-index: 998;
 }
+.nav-item.active > .nav-link {
+  color: var(--Second_Color);
+}
 
 #CartLink {
   color: var(--font_Color);
+}
+
+.nav-item.active > .nav-link {
+  color: var(--Second_Color) !important;
 }
 
 .ul-nav {
