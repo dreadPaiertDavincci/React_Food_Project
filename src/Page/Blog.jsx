@@ -1,4 +1,3 @@
-import BlogCard from "../../Componant/BlogCard";
 import "../Style/BlogCard.css";
 import Card from "../../Componant/BlogCard";
 import { motion, AnimatePresence } from "framer-motion"; // استيراد الانيميشن

@@ -3,20 +3,18 @@ import { FiArrowRightCircle } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 import { useState } from "react";
 
-
-
 function CartPage({ cartItems, setCartItems, onClose }) {
-    const[colse , setClose]   = useState(false); 
-          const handleClose = () => {
-          setClose(true);
-          setTimeout(() => {
-          onClose();
-          setClose(false);
-        }, 200); 
-      };
+  const [colse, setClose] = useState(false);
+  const handleClose = () => {
+    setClose(true);
+    setTimeout(() => {
+      onClose();
+      setClose(false);
+    }, 200);
+  };
   const handleIncrement = (title) => {
     setCartItems((prev) =>
-      prev.map((item) => 
+      prev.map((item) =>
         item.CardTitle === title ? { ...item, count: item.count + 1 } : item
       )
     );
@@ -33,11 +31,11 @@ function CartPage({ cartItems, setCartItems, onClose }) {
   const handleRemove = (title) => {
     setCartItems((prev) => prev.filter((item) => item.CardTitle !== title));
   };
- const totalPrice = cartItems.reduce((acc, item) => {
-  const priceString = item.CardPrice.replace("$", ""); 
-  const price = parseFloat(priceString) || 0; 
-  return acc + price * item.count;
-}, 0);
+  const totalPrice = cartItems.reduce((acc, item) => {
+    const priceString = item.CardPrice.replace("$", "");
+    const price = parseFloat(priceString) || 0;
+    return acc + price * item.count;
+  }, 0);
   return (
     <div className={`side-cart ${colse ? "slide-out" : ""}`}>
       <div className="TotalPriceContinar">
@@ -45,18 +43,14 @@ function CartPage({ cartItems, setCartItems, onClose }) {
         <span className="totalPriceSpan">{totalPrice.toFixed(2)}$</span>
       </div>
       <button className="close-btn" onClick={handleClose}>
-          <FiArrowRightCircle />
+        <FiArrowRightCircle />
       </button>
       <div className="ItemsContinar">
         {cartItems.length === 0 && <p>Your cart is empty.</p>}
         {cartItems.map((item) => (
           <div key={item.CardTitle} className="Item">
             <div className="ImageBar">
-              <img
-                src={item.ImagePath}
-                id="ImageBAr"
-                alt={item.CardTitle}
-              />
+              <img src={item.ImagePath} id="ImageBAr" alt={item.CardTitle} />
             </div>
             <div className="TitleBar">
               <p id="paragraphBar">{item.CardTitle}</p>

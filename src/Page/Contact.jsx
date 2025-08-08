@@ -71,8 +71,6 @@ function Contact(){
                         <p id="FieldParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Ratione necessitatibus,</p>
                         <div className="InputBoxContinar">
-
-
                             <form onSubmit={handleSubmit}>
                             <div className="Input-box">
                                 <input type="text" 
@@ -119,8 +117,7 @@ function Contact(){
                         </div>
                     </div>
               </div>
-           </section>
+          </section>
     );
 }
-
 export default Contact; 
