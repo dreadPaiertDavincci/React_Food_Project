@@ -7,6 +7,7 @@ function P404() {
       <div className="ErrorMessageContinar">
         <h1 id="M404">404</h1>
       </div>
+    
       <div className="HiddenButton404">HOME // 404</div>
       <div className="P404Messages">
         <div className="P404Titles">

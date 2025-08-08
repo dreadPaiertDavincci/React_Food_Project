@@ -105,6 +105,29 @@ function App() {
 }
 
 export default App; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////
 
 // Scroll Animation  (360deg); Rotate   
@@ -186,6 +209,127 @@ const Ani: React.FC = () => {
       <section className="section">
         <h2>🌀 كل ما تنزل... العناصر تتحرك يمين ويسار</h2>
       </section>
+    </div>
+  );
+};
+
+export default Ani;
+
+//////////////////////////////////
+javaSciprt  
+
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import './ScrollShapes.css';
+
+function Ani() {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  // حركة الدائرة يمين ويسار
+  const moveX = useTransform(scrollYProgress, [0, 1], ["-200px", "300px"]);
+
+  // دوران المربع
+  const rotateSquare = useTransform(scrollYProgress, [0, 1], [0, 360]);
+
+  return (
+    <div className="scroll-page">
+      <section className="section">
+        <h2>🌀 دائرة تتحرك يمين ويسار + مربع يلف</h2>
+      </section>
+      <div className='as' ref={targetRef}>
+        <section className="section shapes-container">
+          <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+        </section>
+        <section className="section shapes-container">
+          <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+        </section>
+        <section className="section shapes-container">
+          <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+        </section>
+        <section className="section shapes-container">
+          <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+        </section>
+      </div>
+    </div>
+  );
+}
+
+export default Ani;
+
+////////////////////////
+animation Normal;  
+      initial={{ opacity: 0, x: -80 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once:true, amount: 0.3 }}  
+
+
+  initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          viewport={{ once:true, amount: 0.3 }} 
+
+
+
+          ///////////////////////
+
+
+
+          import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import "./ScrollShapes.css";
+
+const Ani: React.FC = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  // حركة الـ X:
+  // 0 → 0.5 يتحرك يمين 0px إلى 300px
+  // 0.5 → 1 يتحرك يسار 300px إلى -200px
+  const moveX = useTransform(
+    scrollYProgress,
+    [0, 0.2, 1],
+    ["0px", "300px", "-200px"]
+  );
+
+  const rotateSquare = useTransform(scrollYProgress, [0, 1], [0, 360]);
+
+  return (
+    <div className="scroll-page">
+      <section className="section">
+        <h2>🌀 حركة يمين ثم يسار أثناء التمرير (TypeScript)</h2>
+      </section>
+      <div className="as" ref={targetRef}>
+        <section className="section shapes-container">
+          <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+            <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+            <motion.div className="shape circle" style={{ x: moveX }} />
+              <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+            <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+            <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+            <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+            <motion.div className="shape circle" style={{ x: moveX }} />
+          <motion.div className="shape square" style={{ rotate: rotateSquare }} />
+        </section>
+      </div>
     </div>
   );
 };
