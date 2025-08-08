@@ -1,5 +1,4 @@
 import "../src/Style/BlogCard.css";
-
 function Card({ image, icon, title, count }) {
   return (
     <div className="food-card">

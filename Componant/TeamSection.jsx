@@ -16,7 +16,8 @@ const teamMembers = [
 
   { name: 'Duane Campbell',
     title: 'Chef Manager',
-    image: '/cef4.png' },
+    image: '/cef4.png' 
+  },
 ];
 
 export default function TeamSection() {

@@ -1,13 +1,8 @@
 
-
 function Home() {
   return (
     <section className="HomeSection">
-     
-
-   
-   
-   
+      
     </section>
 );
 }

@@ -1,20 +1,14 @@
 
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-}
-
+@import "../Style/Theme.css";
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 كروت بكل صف */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 100px;
   align-items: center;
   justify-content: center;
-  padding:200px;
-  margin-top: 15%;
+  padding: 50px 200px;
+  background-color: var(--Parent_Color);
 }
-
 
 .food-card {
   width: 300px;
@@ -22,9 +16,9 @@ body {
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  border: 2px solid #FF9500;
+  border: 2px solid var(--Second_Color);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-color: white;
+  background-color: var(--White_Color);
   transition: transform 0.3s ease;
 }
 
@@ -46,7 +40,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to top, rgba(255, 149, 0, 0.85), rgba(255, 149, 0, 0.6)); /* ⬅️ برتقالي */
+  background: linear-gradient(to top, #ff9500d9, #ff950099); /* ⬅️ برتقالي */
   padding: 20px 10px 10px 10px;
   text-align: center;
   z-index: 2;
@@ -64,26 +58,20 @@ body {
 .title {
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: var(--White_Color);
   margin: 0;
 }
 
 .subtitle {
   font-size: 14px;
-  color: white;
+  color: var(--White_Color);
   margin: 5px 0 0 0;
 }
 
-.BlogSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
 .icon {
   font-size: 48px;
-  color: white;
+  color: var(--White_Color);
   margin-bottom: 10px;
 }
 

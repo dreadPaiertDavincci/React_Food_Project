@@ -10,26 +10,28 @@
   background-color: var(--Parent_Color);
 }
 .MenuSection {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--Parent_Color);
+ 
 }
 .AboutSection{
   background-color: var(--Parent_Color);
-  height: 100vh; 
+   min-height: 100vh; 
 }
 .BlogSection { 
   background-color: var(--Parent_Color);
   height: 100vh;
 }
 .ContactSection {
-  overflow: hidden;
   background-color: var(--Parent_Color); 
-  height: 100vh;
+  overflow-x: hidden;
 
 }
+
+
 .BlogSection {
   background-color: var(--Parent_Color);
-  height: 100vh;
+  min-height: 100vh;
 }
 .FAQSection {
   background-color: var(--Parent_Color);
@@ -40,6 +42,7 @@
    min-height: 100vh;
 }
 .TermsPrivacySection {
+ 
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,7 +1,7 @@
 import "../Style/BlogCard.css";
 import Card from "../../Componant/BlogCard";
+import Footer from "../../Componant/Footer";
 import { motion, AnimatePresence } from "framer-motion"; // استيراد الانيميشن
-
 function Blog() {
   const data = [
     {
@@ -41,10 +41,10 @@ function Blog() {
       icon: 'bxr bx-taco',
     },
   ];
-
   return (
     <section className="BlogSection">
       <div className="grid-container">
+        
         <AnimatePresence mode="wait">
           {data.map((item, index) => (
             <motion.div
@@ -63,6 +63,10 @@ function Blog() {
             </motion.div>
           ))}
         </AnimatePresence>
+
+      </div>
+      <div>
+        <Footer />
       </div>
     </section>
   );

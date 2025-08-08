@@ -4,6 +4,8 @@ import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
 import "../Style/Menu.css";
 import { AnimatePresence, motion } from "framer-motion";
+import Footer from "../../Componant/Footer"
+;
 import ImageSlider from "../../Componant/ImageSlider";
 function Menu({ cartItems, setCartItems }) {
 
@@ -137,9 +139,9 @@ function Menu({ cartItems, setCartItems }) {
         onAddToCart={handleAddToCart}
       />
 
-
-
-
+       <div>
+        <Footer />
+      </div>
 
     </section>
   );
