@@ -91,6 +91,7 @@ function About() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="feature-card">
           <div className="feature-icon">
             <img src="/abo3.png" alt="Secure Payment" />
@@ -110,6 +111,26 @@ function About() {
         <Footer />
       </div>
     </section>
+=======
+  <div className="feature-card">
+    <div className="feature-icon">
+      <img src="/abo3.png" alt="Secure Payment" />
+    </div>
+    <div className="feature-text">
+      <h3>Secure Payment</h3>
+      <p>Lorem ipsum simply dummy text the printing type setting.</p>
+    </div>
+  </div>
+</div>
+    <div>
+    
+      <TeamSection />
+    </div>
+<div>
+      <Footer />
+    </div>
+        </section>
+>>>>>>> 7a62536db306dc18af6282dcf639f0d174bd6417
   );
 }
 

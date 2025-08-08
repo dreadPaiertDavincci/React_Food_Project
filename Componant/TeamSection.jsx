@@ -1,6 +1,5 @@
-// src/components/TeamSection.jsx
 import React from 'react';
-import "../src/Style/TeamSection.css"; // بدون src/ مرة ثانية إذا الملف موجود بمجلد style
+import "../src/Style/TeamSection.css";
 
 const teamMembers = [
   { name: 'Armando Ryan',

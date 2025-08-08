@@ -91,16 +91,16 @@
 }
 
 .highlight-text {
-  font-size: 1.5rem;  /* أكبر من النص العادي */
-  font-weight: 1000;   /* أغمق من العادي */
+  font-size: 1.5rem;  
+  font-weight: 1000;   
   margin-bottom: 1rem;
 }
 
 
 .cards-container {
   display: flex;
-  gap: 100px; /* مسافة بين الكروت */
-  justify-content: center; /* توسيط الكروت */
+  gap: 100px; 
+  justify-content: center; 
   
 }
 
@@ -118,23 +118,22 @@
 
 .card h2 {
   margin-bottom: 10px;
-   font-size: 1.5rem;  /* أكبر من النص العادي */
+   font-size: 1.5rem; 
   font-weight: 1000;
-  text-align: left; /* أو right للغة العربية */
+  text-align: left; 
 }
 
 .card p {
   color: #555;
-  text-align: left; /* أو right للغة العربية */
+  text-align: left; 
 }
 
 .card:hover {
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.15);
 }
 
-/* قسم الميزات الثلاث */
 .features-section {
-  background-color: #f3984b; /* لون الخلفية برتقالي مثل الصورة */
+  background-color: #f3984b; 
   display: flex;
   justify-content: center;
   gap: 80px;
@@ -148,9 +147,9 @@
 .feature-card {
   display: flex;
   align-items: center;
-  gap: 15px; /* مسافة بين الصورة والنص */
-  max-width: 300px; /* أوسع شوية عشان يتسعوا جنب بعض */
-  text-align: left; /* خلي النص من جهة اليسار */
+  gap: 15px; 
+  max-width: 300px; 
+  text-align: left; 
 }
 
 .feature-icon {
@@ -186,7 +185,6 @@
 
 }
 
-/*فريق عمل */
 .HiddenButton2 {
 
     position: relative; 
