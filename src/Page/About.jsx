@@ -89,11 +89,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur repudianda
   </div>
 </div>
     <div>
-      {/* محتويات الصفحة */}
+    
       <TeamSection />
     </div>
 <div>
-      {/* محتوى الصفحة الرئيسية هون */}
       <Footer />
     </div>
         </section>

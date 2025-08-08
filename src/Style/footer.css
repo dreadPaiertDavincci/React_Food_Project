@@ -1,4 +1,3 @@
-/* src/components/Footer.css */
 
 .footer {
 
@@ -17,7 +16,6 @@
   margin-top: 50 px;
 }
 
-/* Sections */
 .footer-section {
   text-align: center;
 }
@@ -49,7 +47,6 @@
   color: #ffffff;
 }
 
-/* Center - Logo + Search */
 .footer-logo {
   font-size: 24px;
   font-weight: bold;
@@ -84,14 +81,12 @@
   background-color: #ea580c;
 }
 
-/* Right - Contact */
 .footer-section.right p {
   color: #FF9500;
   font-size: 14px;
   margin: 6px 0;
 }
 
-/* Bottom */
 .footer-bottom {
   border-top: 1px solid #374151;
   text-align: center;
@@ -101,7 +96,6 @@
   color: #FF9500;
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
   .footer-container {
     flex-direction: row;
