@@ -1,0 +1,89 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 كروت بكل صف */
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  padding:200px;
+  margin-top: 15%;
+}
+
+
+.food-card {
+  width: 300px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #FF9500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(255, 149, 0, 0.85), rgba(255, 149, 0, 0.6)); /* ⬅️ برتقالي */
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  z-index: 2;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: white;
+  margin: 5px 0 0 0;
+}
+
+.BlogSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.icon {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+}
+

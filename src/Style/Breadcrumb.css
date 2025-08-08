@@ -1,0 +1,15 @@
+/* src/components/Breadcrumb.css */
+.breadcrumb {
+  background-color: #f39657;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-flex;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.slash {
+  font-weight: bold;
+}

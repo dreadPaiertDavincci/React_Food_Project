@@ -1,10 +1,15 @@
-import "../App.css";
-function Home(){
 
-    return(
-     <section className="HomeSection">
-          <h1>hi</h1>
-     </section>      
-   );
+
+function Home() {
+  return (
+    <section className="HomeSection">
+     
+
+   
+   
+   
+    </section>
+);
 }
-export default Home; 
+
+export default Home;

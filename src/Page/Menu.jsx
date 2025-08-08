@@ -2,7 +2,6 @@ import FoodCard from "../../Componant/FoodCard";
 import FoodDate from "../../Componant/FoodDate";
 import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
-
 import "../Style/Menu.css";
 import { AnimatePresence, motion } from "framer-motion";
 import ImageSlider from "../../Componant/ImageSlider";
