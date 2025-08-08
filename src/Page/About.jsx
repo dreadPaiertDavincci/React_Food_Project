@@ -6,7 +6,6 @@ import Footer from '../../Componant/Footer';
 import "../Style/Footer.css"
 
 function About() {
-  
   return (
     <section className="AboutSection">
      <div className="Imageabout">
