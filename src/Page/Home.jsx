@@ -1,6 +1,7 @@
 import "../Style/Home.css";
 import HomeCard from "../../Componant/HomeCard"
-
+import Footer from "../../Componant/Footer";
+import "../Style/Footer.css";
 
 function Home() {
   return (
