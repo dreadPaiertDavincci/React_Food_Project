@@ -7,7 +7,6 @@ function Footer () {
   const footerElement2Loop = footerElement2.map((Ele ,  index) => {
     return(<li key={index}><a href="#">{Ele}</a></li>);
   });
-
   const footerElementLoop =footerElement.map((Ele , index) => {  
     return(<li key={index}><a href="#">{Ele}</a></li>);
   }); 
