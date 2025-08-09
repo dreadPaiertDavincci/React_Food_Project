@@ -3,6 +3,7 @@ import TeamSection from "../../Componant/TeamSection";
 import "../Style/TeamSection.css";
 import Footer from "../../Componant/Footer";
 import "../Style/Footer.css";
+import { motion } from "framer-motion";
 
 function About() {
   return (
@@ -14,8 +15,14 @@ function About() {
 
       <div className="HiddenButton">HOME // About</div>
 
-      <div className="aboutContinar">        
-        <div className="aboutImageText">
+      <div className="aboutContinar">  
+
+        <motion.div 
+          initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          viewport={{ once:true, amount: 0.2 }} 
+        className="aboutImageText">
           <div className="aboutImage">
             <img src="/about1.png" alt="Tahiyati" />
           </div>
@@ -41,7 +48,7 @@ function About() {
 
             <div className="HiddenButton3">Contact Us →</div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="cards-container">

@@ -11,19 +11,26 @@
 .MenuSection {
   min-height: 100vh;
   background-color: var(--Parent_Color);
+    background: url('/public/bghome.jpg') no-repeat center center;
+  background-size: cover;
  
 }
 .AboutSection{
   background-color: var(--Parent_Color);
    min-height: 100vh; 
+     background: url('/public/bghome.jpg') no-repeat center center;
+  background-size: cover;
 }
 .BlogSection { 
-  background-color: var(--Parent_Color);
+   background: url('/public/bghome.jpg') no-repeat center center;
+  background-size: cover;
   height: 100vh;
 }
 .ContactSection {
-  background-color: var(--Parent_Color); 
+    background: url('/public/bghome.jpg') no-repeat center center;
+  background-size: cover;
   overflow-x: hidden;
+  margin: 0;
 
 }
 
@@ -34,10 +41,12 @@
 }
 .FAQSection {
   background-color: var(--Parent_Color);
+
 }
 .P404Section {
   background-color: var(--Parent_Color);
   height: auto;
+
    min-height: 100vh;
 }
 .TermsPrivacySection {

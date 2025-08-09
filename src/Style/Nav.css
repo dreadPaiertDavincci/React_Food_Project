@@ -11,6 +11,9 @@
   position: sticky;
   top: 0;
   z-index: 998;
+  background: url('/public/bghome.jpg') no-repeat center center;
+  background-size: cover;
+
 }
 
 #CartLink {
