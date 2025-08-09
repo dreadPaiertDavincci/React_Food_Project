@@ -7,7 +7,6 @@ function Footer () {
   const footerElement2Loop = footerElement2.map((Ele ,  index) => {
     return(<li key={index}><a href="#">{Ele}</a></li>);
   });
-
   const footerElementLoop =footerElement.map((Ele , index) => {  
     return(<li key={index}><a href="#">{Ele}</a></li>);
   }); 
@@ -19,7 +18,6 @@ function Footer () {
           <h3 className="footer-heading">Quick Links</h3>
           <ul className="footer-links">
             {footerElementLoop}
-            
           </ul>
         </div>        
         <div className="footer-section center">

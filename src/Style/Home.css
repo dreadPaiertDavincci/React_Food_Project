@@ -1,4 +1,5 @@
 .home-section {
+  background-color: red;
   background: url('/public/bghome.jpg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
@@ -19,10 +20,10 @@
 }
 
 .HomeContinar {
+  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   gap: 20px;
   flex-wrap: nowrap; 
   width: 100%;
@@ -36,6 +37,10 @@
 
 
 .HomeText {
+
+  position: relative; 
+  top: 30px; 
+  right: 30px;
   flex: 1 1 60%;
   max-width:  500px;
   text-align: left;
@@ -53,6 +58,9 @@
 }
 
 .HomeImage {
+  position: relative;
+  top: 70px;
+  left:150px;
   width: 450px;         
   height: 450px;        
   border-radius: 50%;   

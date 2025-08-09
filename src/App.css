@@ -5,9 +5,8 @@
   margin: 0; 
   box-sizing: border-box;
 }
-.HomeSection { 
-  height: 100vh;
-  background-color: var(--Parent_Color);
+.home-section  { 
+   background: url('/public/bghome.jpg') no-repeat center center;
 }
 .MenuSection {
   min-height: 100vh;

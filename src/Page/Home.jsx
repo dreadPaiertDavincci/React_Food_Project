@@ -1,8 +1,5 @@
 import "../Style/Home.css";
 import HomeCard from "../../Componant/HomeCard"
-import "../Style/HomeCard.css"
-import Footer from '../../Componant/Footer';
-import "../Style/Footer.css"
 
 
 function Home() {
