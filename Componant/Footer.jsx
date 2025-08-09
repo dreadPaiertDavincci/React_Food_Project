@@ -18,7 +18,6 @@ function Footer () {
           <h3 className="footer-heading">Quick Links</h3>
           <ul className="footer-links">
             {footerElementLoop}
-            
           </ul>
         </div>        
         <div className="footer-section center">
