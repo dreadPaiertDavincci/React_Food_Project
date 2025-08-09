@@ -27,7 +27,6 @@ function Footer () {
             <button type="submit" className="footer-search-button">Search</button>
           </form>
         </div>
-
         <div className="footer-section right">
           <h3 className="footer-heading">Contact Us</h3>
           <p>Email: support@chefzone.com</p>
