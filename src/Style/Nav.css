@@ -16,6 +16,10 @@
 #CartLink {
   color: var(--font_Color);
 }
+.nav-link.active,
+.subLink.active {
+  color: var(--Second_Color) !important;
+}
 
 .ul-nav {
      display: flex;
