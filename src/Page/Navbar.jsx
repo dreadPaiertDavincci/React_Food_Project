@@ -46,7 +46,6 @@ function NavBar({ cartItems, setCartItems }) {
           {e.name}
           {e.subPage && <span className="dropdown-arrow">▼</span>}
         </Link>
-
         {e.subPage && (
           <ul className="dropdown">
             {e.subPage.map((sub, subIndex) => {
