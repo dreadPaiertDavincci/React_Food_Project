@@ -46,7 +46,7 @@ export default function TeamSection() {
           <motion.article 
           initial={{ opacity: 0, y: 100}}
             whileInView={{ opacity: 1, y: 0 }}  
-            transition={{ duration: 0.5 , delay: index * 0.5 }}
+            transition={{ duration: 0.5 , delay: index * 0.5 ,type: "tween"}}
             viewport={{ once:true, amount: 0.2 }}
           className="card2" key={member.name}>
             <div className="imageWrapper">
