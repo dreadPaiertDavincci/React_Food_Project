@@ -1,7 +1,7 @@
 import { IoLocation } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Footer from "../../Componant/Footer"
+import Footer from "../../Componant/Footer";
 import "../Style/Contact.css";
 import { useRef, useState } from "react";
 function Contact() {

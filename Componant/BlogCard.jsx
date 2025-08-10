@@ -13,5 +13,3 @@ function Card({ image, icon, title, count }) {
 }
 
 export default Card;
-
-

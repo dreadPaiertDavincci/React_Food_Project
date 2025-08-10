@@ -1,21 +1,24 @@
-import React from 'react';
-import '../src/Style/HomeCard.css';
+import React from "react";
+import "../src/Style/HomeCard.css";
 
 const dishes = [
   {
-    title: 'Stirred Egg',
-    description: 'This might be the most common Chinese family dish. The dish is easy to cook, fry the stirred egg and sliced tomato.',
-    image: '/hcard.jpg',
+    title: "Stirred Egg",
+    description:
+      "This might be the most common Chinese family dish. The dish is easy to cook, fry the stirred egg and sliced tomato.",
+    image: "/hcard.jpg",
   },
   {
-    title: 'Kung Pao Chicken',
-    description: 'When temperatures plummet and you’re craving something warm and cozy, you can’t go wrong with fluffy.',
-    image: '/hcard1.jpg',
+    title: "Kung Pao Chicken",
+    description:
+      "When temperatures plummet and you’re craving something warm and cozy, you can’t go wrong with fluffy.",
+    image: "/hcard1.jpg",
   },
   {
-    title: 'Sweet Pork Chops',
-    description: 'Sweet and sour dishes are popular among Chinese families, although the ingredients and cooking methods vary.',
-    image: '/hcard2.jpg',
+    title: "Sweet Pork Chops",
+    description:
+      "Sweet and sour dishes are popular among Chinese families, although the ingredients and cooking methods vary.",
+    image: "/hcard2.jpg",
   },
 ];
 
@@ -46,4 +49,3 @@ const MenuSection = () => {
 };
 
 export default MenuSection;
-

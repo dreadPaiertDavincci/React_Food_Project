@@ -4,11 +4,9 @@ import { useState } from "react";
 import CardShowPage from "../../Componant/CardShowPage";
 import "../Style/Menu.css";
 import { AnimatePresence, motion } from "framer-motion";
-import Footer from "../../Componant/Footer"
-;
+import Footer from "../../Componant/Footer";
 import ImageSlider from "../../Componant/ImageSlider";
 function Menu({ cartItems, setCartItems }) {
-
   const [selectedFood, setSelectedFood] = useState(null);
 
   const [foodcategory, setFoodCategory] = useState("pizza");
@@ -16,17 +14,13 @@ function Menu({ cartItems, setCartItems }) {
     setFoodCategory(category);
   };
 
-  const filterFood = FoodDate.filter((food) =>
-    food.category === foodcategory
-  );
+  const filterFood = FoodDate.filter((food) => food.category === foodcategory);
   const handleCardClick = (food) => {
     setSelectedFood(food);
   };
   const handleAddToCart = (food) => {
     setCartItems((prevItems) => {
-      const exist = prevItems.find(
-        (item) => item.CardTitle === food.CardTitle
-      );
+      const exist = prevItems.find((item) => item.CardTitle === food.CardTitle);
       if (exist) {
         return prevItems.map((item) =>
           item.CardTitle === food.CardTitle
@@ -82,7 +76,13 @@ function Menu({ cartItems, setCartItems }) {
           </div>
           <div className="vertical-line"></div>
           <div className="FB">
-            <i className={`bxr bx-bowl-rice ${foodcategory === "Authority" ? "active-icon" : ""}`} onClick={() => handleFilterCard("Authority")}id="foodCateg"></i>
+            <i
+              className={`bxr bx-bowl-rice ${
+                foodcategory === "Authority" ? "active-icon" : ""
+              }`}
+              onClick={() => handleFilterCard("Authority")}
+              id="foodCateg"
+            ></i>
             <span id="FodSpan">Authority</span>
           </div>
           <div className="vertical-line"></div>
@@ -110,39 +110,35 @@ function Menu({ cartItems, setCartItems }) {
         </div>
       </div>
 
-    <div className="FilterCardContinar">
-      <AnimatePresence mode="wait">
-
-         {filterFood.map((food, index) => (
-           <motion.div
-             key={food.CardTitle}
-             initial={{ opacity: 0, y: 50 }}
-             animate={{ opacity: 1, y: 0 }}
-             exit={{ opacity: 0, y: -30 }}
-             transition={{ duration: 0.4, delay: index * 0.05 }}
+      <div className="FilterCardContinar">
+        <AnimatePresence mode="wait">
+          {filterFood.map((food, index) => (
+            <motion.div
+              key={food.CardTitle}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
             >
-             <FoodCard
-              {...food}
-              onClick={() => handleCardClick(food)}
-              onAddToCart={() => handleAddToCart(food)}
-            />
-         </motion.div>
+              <FoodCard
+                {...food}
+                onClick={() => handleCardClick(food)}
+                onAddToCart={() => handleAddToCart(food)}
+              />
+            </motion.div>
           ))}
-          </AnimatePresence>
+        </AnimatePresence>
       </div>
 
-
-
       <CardShowPage
-        food = {selectedFood}
+        food={selectedFood}
         onClose={() => setSelectedFood(null)}
         onAddToCart={handleAddToCart}
       />
 
-       <div>
+      <div>
         <Footer />
       </div>
-
     </section>
   );
 }

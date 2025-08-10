@@ -5,46 +5,45 @@ import { motion, AnimatePresence } from "framer-motion"; // استيراد ال�
 function Blog() {
   const data = [
     {
-      title: 'pizza',
+      title: "pizza",
       count: 6,
-      image: '/PizzaImages/p1.jpg',
-      icon: 'bx bx-pizza',
+      image: "/PizzaImages/p1.jpg",
+      icon: "bx bx-pizza",
     },
     {
-      title: 'Western food',
+      title: "Western food",
       count: 6,
-      image: '/WesternImages/w1.jpg',
-      icon: 'bxr bx-burger-alt',
+      image: "/WesternImages/w1.jpg",
+      icon: "bxr bx-burger-alt",
     },
     {
-      title: 'Oriental food',
+      title: "Oriental food",
       count: 6,
-      image: '/OrientleImages/c1.jpg',
-      icon: 'bxr bx-bowl-hot',
+      image: "/OrientleImages/c1.jpg",
+      icon: "bxr bx-bowl-hot",
     },
     {
-      title: 'Authority',
+      title: "Authority",
       count: 6,
-      image: '/AuthorityImages/s1.jpg',
-      icon: 'bxr bx-bowl-rice',
+      image: "/AuthorityImages/s1.jpg",
+      icon: "bxr bx-bowl-rice",
     },
     {
-      title: 'drinks',
+      title: "drinks",
       count: 6,
-      image: '/DrinksImages/d1.jpg',
-      icon: 'bxr bx-coffee-cup',
+      image: "/DrinksImages/d1.jpg",
+      icon: "bxr bx-coffee-cup",
     },
     {
-      title: 'sweet',
+      title: "sweet",
       count: 6,
-      image: '/CandiesImages/ca1.jpg',
-      icon: 'bxr bx-taco',
+      image: "/CandiesImages/ca1.jpg",
+      icon: "bxr bx-taco",
     },
   ];
   return (
     <section className="BlogSection">
       <div className="grid-container">
-        
         <AnimatePresence mode="wait">
           {data.map((item, index) => (
             <motion.div
@@ -63,7 +62,6 @@ function Blog() {
             </motion.div>
           ))}
         </AnimatePresence>
-
       </div>
       <div>
         <Footer />

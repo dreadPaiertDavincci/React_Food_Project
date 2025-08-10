@@ -11,27 +11,22 @@ function About() {
       <div className="Imageabout">
         <h1 id="aboutTITLEID">About Us</h1>
       </div>
-
-
       <div className="HiddenButton">HOME // About</div>
-
-      <div className="aboutContinar">  
-
-        <motion.div 
+      <div className="aboutContinar">
+        <motion.div
           initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          viewport={{ once:true, amount: 0.2 }} 
-        className="aboutImageText">
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="aboutImageText"
+        >
           <div className="aboutImage">
             <img src="/about1.png" alt="Tahiyati" />
           </div>
-
           <div className="aboutText">
             <p className="highlight-text">
               We provide 100% halal bakery product.
             </p>
-
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
               nisi suscipit commodi, vitae eligendi assumenda tenetur sapiente
@@ -52,12 +47,13 @@ function About() {
       </div>
 
       <div className="cards-container">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -70 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once:true, amount: 0.2 }}
-         className="card">
+          viewport={{ once: true, amount: 0.2 }}
+          className="card"
+        >
           <h2>Our Mission</h2>
           <p>
             Netus et malesuada fames ac turpis. Rhoncus urna neque viverra justo
@@ -70,12 +66,13 @@ function About() {
           </p>
         </motion.div>
 
-        <motion.div 
-        initial={{ opacity: 0, x: 70 }}
+        <motion.div
+          initial={{ opacity: 0, x: 70 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once:true, amount: 0.3 }}
-        className="card">
+          viewport={{ once: true, amount: 0.3 }}
+          className="card"
+        >
           <h2>Our Vision</h2>
           <p>
             Netus et malesuada fames ac turpis. Rhoncus urna neque viverra justo
@@ -89,12 +86,13 @@ function About() {
         </motion.div>
       </div>
 
-      <motion.div 
-      initial={{ opacity: 0, y: 100 }}
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        viewport={{ once:true, amount: 0.3 }}
-      className="features-section">
+        viewport={{ once: true, amount: 0.3 }}
+        className="features-section"
+      >
         <div className="feature-card">
           <div className="feature-icon">
             <img src="/abo2.png" alt="Free Delivery" />

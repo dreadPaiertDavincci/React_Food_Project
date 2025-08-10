@@ -1,15 +1,20 @@
 import "./App.css";
-import NavBar from "./Page/NavBar"; 
+import NavBar from "./Page/NavBar";
 import Home from "./Page/Home";
 import About from "./Page/About";
-import Menu from "./Page/Menu"; 
+import Menu from "./Page/Menu";
 import Blog from "./Page/Blog";
-import Contact from "./Page/Contact"; 
-import PFAQ from "./Page/PFAQ"; 
-import P404 from "./Page/P404"; 
+import Contact from "./Page/Contact";
+import PFAQ from "./Page/PFAQ";
+import P404 from "./Page/P404";
 import TransitionAnimation from "../src/Animation/TransitionAnimation";
-import TermsPrivacy from "./Page/Terms&Privacy"; 
-import { BrowserRouter as Router, Routes, Route , useLocation } from "react-router-dom";
+import TermsPrivacy from "./Page/Terms&Privacy";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 function AnimatedRoutes({ cartItems, setCartItems }) {
@@ -87,7 +92,6 @@ function AnimatedRoutes({ cartItems, setCartItems }) {
 }
 function App() {
   const [cartItems, setCartItems] = useState([]);
-
   return (
     <Router>
       <NavBar cartItems={cartItems} setCartItems={setCartItems} />
@@ -97,4 +101,3 @@ function App() {
 }
 
 export default App;
-

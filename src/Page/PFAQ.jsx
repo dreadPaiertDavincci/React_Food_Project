@@ -23,7 +23,7 @@ function PFAQ() {
           <According />
         </div>
       </div>
-        <div>
+      <div>
         <Footer />
       </div>
     </section>

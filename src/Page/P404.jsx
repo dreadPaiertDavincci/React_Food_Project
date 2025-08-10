@@ -7,7 +7,7 @@ function P404() {
       <div className="ErrorMessageContinar">
         <h1 id="M404">404</h1>
       </div>
-    
+
       <div className="HiddenButton404">HOME // 404</div>
       <div className="P404Messages">
         <div className="P404Titles">
@@ -25,7 +25,7 @@ function P404() {
           <img src="../../public/404.png" id="ErrorImage" alt="" />
         </div>
       </div>
-        <div>
+      <div>
         <Footer />
       </div>
     </section>
