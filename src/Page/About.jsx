@@ -52,7 +52,12 @@ function About() {
       </div>
 
       <div className="cards-container">
-        <div className="card">
+        <motion.div 
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once:true, amount: 0.2 }}
+         className="card">
           <h2>Our Mission</h2>
           <p>
             Netus et malesuada fames ac turpis. Rhoncus urna neque viverra justo
@@ -63,9 +68,14 @@ function About() {
             Cursus turpis massa tincidunt dui ut ornare lectus sit. Facilisi
             cras fermentum odio eu feugiat.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="card">
+        <motion.div 
+        initial={{ opacity: 0, x: 70 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once:true, amount: 0.3 }}
+        className="card">
           <h2>Our Vision</h2>
           <p>
             Netus et malesuada fames ac turpis. Rhoncus urna neque viverra justo
@@ -76,10 +86,15 @@ function About() {
             Cursus turpis massa tincidunt dui ut ornare lectus sit. Facilisi
             cras fermentum odio eu feugiat.
           </p>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="features-section">
+      <motion.div 
+      initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once:true, amount: 0.3 }}
+      className="features-section">
         <div className="feature-card">
           <div className="feature-icon">
             <img src="/abo2.png" alt="Free Delivery" />
@@ -109,7 +124,7 @@ function About() {
             <p>Lorem ipsum simply dummy text the printing type setting.</p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="chefContinar">
         <TeamSection />

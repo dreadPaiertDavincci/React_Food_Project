@@ -1,5 +1,6 @@
 import React from 'react';
 import "../src/Style/TeamSection.css";
+import { motion } from "framer-motion";
 
 const teamMembers = [
   { name: 'Armando Ryan',
@@ -23,13 +24,31 @@ const teamMembers = [
 export default function TeamSection() {
   return (
     <section className="Tsection">
-      <div className="HiddenButton2">
+      <div className='HiddenButton2Continar'>
+      <motion.div 
+       initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}  
+        transition={{ duration: 0.9 }}
+        viewport={{ once:true, amount: 0.2 }}
+      className="HiddenButton2">
                TEAM MEMBERS
-                </div>
-      <h2 className="title2">Our Expert Chef</h2>
+                </motion.div>
+      </div>
+
+      <motion.h2 
+      initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}  
+        transition={{ duration: 1 }}
+        viewport={{ once:true, amount: 0.2 }} 
+      className="title2">Our Expert Chef</motion.h2>
       <div className="grid">
-        {teamMembers.map(member => (
-          <article className="card2" key={member.name}>
+        {teamMembers.map((member , index) => (
+          <motion.article 
+          initial={{ opacity: 0, y: 100}}
+            whileInView={{ opacity: 1, y: 0 }}  
+            transition={{ duration: 0.5 , delay: index * 0.5 }}
+            viewport={{ once:true, amount: 0.2 }}
+          className="card2" key={member.name}>
             <div className="imageWrapper">
               <img src={member.image} alt={member.name} className="image" loading="lazy" />
             </div>
@@ -37,7 +56,7 @@ export default function TeamSection() {
               <h3 className="name">{member.name}</h3>
               <p className="role">{member.title}</p>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </section>
