@@ -22,7 +22,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="section">
+    <section className="Tsection">
       <div className="HiddenButton2">
                TEAM MEMBERS
                 </div>

@@ -1,8 +1,9 @@
 @import "../Style/Theme.css";
-.section {
+.Tsection {
   padding: 80px 20px;
-  background-color: var(--Parent_Color);
   text-align: center;
+   background-color: #f7f4f4;
+background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
 }
 
 .title2 {

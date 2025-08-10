@@ -7,9 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px 200px;
-   background: url('/public/bghome.jpg') no-repeat center center;
-  background-size: cover;
-
+  
 }
 
 .food-card {

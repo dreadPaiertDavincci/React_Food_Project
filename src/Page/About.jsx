@@ -114,8 +114,6 @@ function About() {
       <div className="chefContinar">
         <TeamSection />
       </div>
-
-
       <div>
         <Footer />
       </div>

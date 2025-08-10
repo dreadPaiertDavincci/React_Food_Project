@@ -66,6 +66,5 @@
     display: grid;
     grid-template-columns: auto auto auto ;
     flex-wrap: wrap;
-    background-color: var( --Parent_Color); 
     margin-bottom: 150px;
 }

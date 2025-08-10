@@ -11,8 +11,8 @@
   position: sticky;
   top: 0;
   z-index: 998;
-  background: url('/public/bghome.jpg') no-repeat center center;
-  background-size: cover;
+ background-color: #f7f4f4;
+background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
 
 }
 

@@ -1,61 +1,47 @@
-@import "./Style/Theme.css"; 
+@import "./Style/Theme.css";
 
-* { 
+* {
   padding: 0;
-  margin: 0; 
+  margin: 0;
   box-sizing: border-box;
 }
-.home-section  { 
-   background: url('/public/bghome.jpg') no-repeat center center;
+body {
+  background-color: var(--Parent_Color);
+  background-image: url("https://www.transparenttextures.com/patterns/rocky-wall.png");
+}
+
+.home-section {
+  min-height: 100vh;
 }
 .MenuSection {
   min-height: 100vh;
-  background-color: var(--Parent_Color);
-    background: url('/public/bghome.jpg') no-repeat center center;
-  background-size: cover;
- 
 }
-.AboutSection{
-  background-color: var(--Parent_Color);
-   min-height: 100vh; 
-     background: url('/public/bghome.jpg') no-repeat center center;
-  background-size: cover;
+.AboutSection {
+  min-height: 100vh;
 }
-.BlogSection { 
-   background: url('/public/bghome.jpg') no-repeat center center;
-  background-size: cover;
+.BlogSection {
   height: 100vh;
 }
 .ContactSection {
-    background: url('/public/bghome.jpg') no-repeat center center;
-  background-size: cover;
   overflow-x: hidden;
   margin: 0;
-
 }
-
 
 .BlogSection {
-  background-color: var(--Parent_Color);
   min-height: 100vh;
 }
-.FAQSection {
-  background-color: var(--Parent_Color);
 
-}
 .P404Section {
-  background-color: var(--Parent_Color);
   height: auto;
 
-   min-height: 100vh;
+  min-height: 100vh;
 }
 .TermsPrivacySection {
- 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var(--Parent_Color);
-  height: auto;  
+
+  height: auto;
   min-height: 100vh;
 }
