@@ -4,7 +4,24 @@
   padding: 0; 
   margin: 0;  
 }
-
+.HomeHeaderImage {
+  background-color: red;
+  height: 120px;
+  width: 100%;
+}
+.BodyImageContinar { 
+  margin-top: 80px;
+  background-color: red;
+  height: 120px ;
+  width: 100%;
+}
+.CardBottomImagesContinar { 
+  position: relative;
+  bottom: 100px;
+  background-color: red;
+  height: 120px ;
+  width: 100%;
+}
 
 
 .HomeContinar,
@@ -19,7 +36,8 @@
 }
 
 .HomeContinar {
-  background-color: red;
+  position: relative;
+  bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +51,7 @@
   color: #333;
 
 }
-
-
 .HomeText {
-
   position: relative; 
   top: 30px; 
   right: 30px;
@@ -48,7 +63,10 @@
   font-size: 18px;  
   line-height: 1.6; 
 }
-
+.HomeCardContainer { 
+  position: relative;
+  bottom: 70px;
+}
 .highlight-text {
   font-weight: 700;
   font-size: 24px; 
@@ -99,14 +117,17 @@
 }
 
 .testimonial-container {
+  position: relative;
+  bottom: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
   gap: 4rem;
   padding: 2rem;
   background: #f8f8f8;
   border-radius: 8px;
-  max-width: 900px;
-  margin: auto;
+  width :100%;
   font-family: Arial, sans-serif;
   color: #333;
   flex-direction: row-reverse;
@@ -114,6 +135,8 @@
 
 .testimonial-text {
   flex: 2;
+  max-width: 500px;
+
 }
 
 .testimonial-text h2 {
