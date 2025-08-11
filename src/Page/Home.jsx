@@ -5,6 +5,10 @@ import "../Style/Footer.css";
 function Home() {
   return (
     <section className="home-section">
+      <div className="HomeHeaderImage">
+
+      </div>
+
       <div className="HomeContinar">
         <div className="HomeText">
           <p className="highlight-text">
@@ -25,8 +29,16 @@ function Home() {
         </div>
       </div>
 
-      <div>
+      <div className ="BodyImageContinar">
+
+      </div>
+
+      <div className="HomeCardContainer">
         <HomeCard />
+      </div>
+
+      <div className="CardBottomImagesContinar">
+        
       </div>
 
       <div className="testimonial-container">
