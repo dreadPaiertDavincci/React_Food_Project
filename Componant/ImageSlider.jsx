@@ -48,14 +48,7 @@ function ImageSlider() {
         ></button>
       </div>
       <div className="carousel-inner">
-        <div className="carousel-item active" data-bs-interval="2500">
-          <img
-            src="../public/Images/Men1.jpg"
-            id="IMSL"
-            className="d-block w-100"
-            alt="Tahiyati"
-          />
-        </div>
+       
         <div className="carousel-item" data-bs-interval="2500">
           <img
             src="../public/Images/Men2.jpg"

@@ -6,9 +6,7 @@ function Home() {
   return (
     <section className="home-section">
       <div className="HomeHeaderImage">
-
       </div>
-
       <div className="HomeContinar">
         <div className="HomeText">
           <p className="highlight-text">
@@ -38,7 +36,7 @@ function Home() {
       </div>
 
       <div className="CardBottomImagesContinar">
-        
+
       </div>
 
       <div className="testimonial-container">
