@@ -1,24 +1,23 @@
 import React from "react";
 import "../src/Style/HomeCard.css";
-
 const dishes = [
   {
     title: "Stirred Egg",
     description:
       "This might be the most common Chinese family dish. The dish is easy to cook, fry the stirred egg and sliced tomato.",
-    image: "/hcard.jpg",
+    image: "../src/HomeImage/HO5.png",
   },
   {
     title: "Kung Pao Chicken",
     description:
       "When temperatures plummet and you’re craving something warm and cozy, you can’t go wrong with fluffy.",
-    image: "/hcard1.jpg",
+    image: "../src/HomeImage/HO14.png",
   },
   {
     title: "Sweet Pork Chops",
     description:
       "Sweet and sour dishes are popular among Chinese families, although the ingredients and cooking methods vary.",
-    image: "/hcard2.jpg",
+    image: "../src/HomeImage/HO15.png",
   },
 ];
 
@@ -28,11 +27,7 @@ const MenuSection = () => {
       <div className="menu-header">
         <h2>What's on our Plate</h2>
         <p>Please serve yourself without any hesitate</p>
-        <div className="menu-tabs">
-          <span>Appetizers</span>
-          <span className="active">Main Dish</span>
-          <span>Dessert</span>
-        </div>
+
       </div>
 
       <div className="menu-grid">

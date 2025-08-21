@@ -6,6 +6,16 @@ function Home() {
   return (
     <section className="home-section">
       <div className="HomeHeaderImage">
+
+        <div className="HeaderLeftImages">
+          <img id="HEIM" src="../../src/HomeImage/HO2.png" alt="Tahiyati" />
+        </div>
+
+        <div className="HeaderRightImages">
+          <img id="HEIM2" src="../../src/HomeImage/HO4.png" alt="Tahiyati" />
+          <img id="HEIM3" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
+        </div>
+
       </div>
       <div className="HomeContinar">
         <div className="HomeText">
@@ -23,12 +33,21 @@ function Home() {
         </div>
 
         <div className="HomeImage">
-          <img src="/home.jpg" alt="img" />
+          <img src="../../src/HomeImage/HO20.png" id="HeaderHomImage" alt="img" />
+          <img src="../../src/HomeImage/HO3.png" id="HeaderHomImage2" alt="img" />
         </div>
       </div>
 
       <div className ="BodyImageContinar">
+        <div className="BodImageLeft">
+           <img id="HEIM4" src="../../src/HomeImage/HO9.png"  alt="img" />
+        </div>
 
+        <div className="BodImageRight">
+          <img id="HEIM5" src="../../src/HomeImage/HO21.png"  alt="img" />
+
+        </div>
+        
       </div>
 
       <div className="HomeCardContainer">
@@ -36,6 +55,16 @@ function Home() {
       </div>
 
       <div className="CardBottomImagesContinar">
+
+        <div className="BotLeft">
+          <img id="HEIM6" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
+          <img id="HEIM7" src="../../src/HomeImage/HO16.png" alt="Tahiyati" />
+        </div>
+
+        <div className="BotRight">
+          <img id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
+          <img id="HEIM8" src="../../src/HomeImage/HO18.png" alt="Tahiyati" />
+        </div>
 
       </div>
 
@@ -54,7 +83,7 @@ function Home() {
           </p>
         </div>
         <div className="testimonial-image">
-          <img src="/home1.jpg" alt="User Testimonial" />
+          <img src="../../src/HomeImage/HO55.png" alt="User Testimonial" />
         </div>
       </div>
 
