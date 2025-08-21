@@ -22,16 +22,22 @@ function Home() {
   const fastX2 = useSpring(moveX2, { stiffness: 200, damping: 30 });
   const moveX3 = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
+ 
   // Body Left Image
-  const moveX4 = useTransform(scrollYProgress, [0, 1], [-200, 200]); // يسار
-  const fastX4 = useSpring(moveX4, { stiffness: 300, damping: 30 });
+   const moveX4 = useTransform(scrollYProgress, [0, 0.4, 1], [0, 100, -300]);
 
   // Body Right Image
-  const moveX5 = useTransform(scrollYProgress, [0, 1], [100, -200]); // يسار
-  const fastX5 = useSpring(moveX5, { stiffness: 300, damping: 30 });
+  const moveX5 = useTransform(scrollYProgress, [0, 0.4, 1], [150, -70,180]); 
   // Rotations for Home Images
   const rotateRight = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotateLeft = useTransform(scrollYProgress, [0, 1], [0, -360]);
+
+   // Bottom Left Image
+    const moveX6 = useTransform(scrollYProgress, [0, 0.5, 1], [-150, 150, -150]);
+   const moveX62 = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 200, -200]);
+
+   // Body Right Image
+   const moveX7 = useTransform(scrollYProgress, [0, 0.4, 1], [150, -70,180]); 
 
   return (
     <section ref={targetRef} className="home-section">
@@ -98,14 +104,14 @@ function Home() {
       <div className="BodyImageContinar">
         <div className="BodImageLeft">
           <motion.img
-            style={{ x: fastX4 }}
+            style={{ x: moveX4 }}
             id="HEIM4"
             src="../../src/HomeImage/HO9.png"
             alt="img"
           />
         </div>
         <div className="BodImageRight">
-          <motion.img style={{x:fastX5}} id="HEIM5" src="../../src/HomeImage/HO21.png" alt="img" />
+          <motion.img style={{x:moveX5}} id="HEIM5" src="../../src/HomeImage/HO21.png" alt="img" />
         </div>
       </div>
 
@@ -117,8 +123,12 @@ function Home() {
       {/* Bottom Images */}
       <div className="CardBottomImagesContinar">
         <div className="BotLeft">
-          <img id="HEIM6" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
-          <img id="HEIM7" src="../../src/HomeImage/HO16.png" alt="Tahiyati" />
+          <motion.img 
+           style={{x:moveX6}}
+          id="HEIM6" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
+          <motion.img 
+          style={{x:moveX62}}
+          id="HEIM7" src="../../src/HomeImage/HO16.png" alt="Tahiyati" />
         </div>
         <div className="BotRight">
           <img id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
@@ -147,8 +157,9 @@ function Home() {
       </div>
 
       {/* Footer */}
-      <Footer />
-
+        <div className="HomeFooter">
+        <Footer />  
+      </div> 
     </section>
   );
 }

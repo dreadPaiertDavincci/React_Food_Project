@@ -1,6 +1,5 @@
 .home-section {
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 #HeaderHomImage2 {
@@ -103,7 +102,7 @@
 
 .testimonial-container {
   position: relative;
-  bottom: 50px;
+  top: 170px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -212,22 +211,23 @@
 }
 #HEIM4 {
   position: relative;
-  right: 20px;
+  top: 130px;
+  right: 100px;
   bottom: 20px;
   width: 240px;
   height: 180px;
 }
 #HEIM5 {
   position: relative;
-  top: 15px;
-  left: 10px;
+  top:  175px;
+  left: 50px;
   width: 250px;
   height: 250px;
 }
 
 .CardBottomImagesContinar {
   position: relative;
-  bottom: 100px;
+  top: 50px;
   height: 120px;
   width: 100%;
   display: flex;
@@ -243,20 +243,25 @@
   height: 120px;
 }
 
+
+
 #HEIM6 {
   position: relative;
-  left: 20px;
+  bottom: 50px;
+  right: 100px;
   width: 150px;
   height: 120px;
 }
 #HEIM7 {
   position: relative;
-  right: 150px;
+  right: 320px;
+  bottom: 50px;
   width: 120px;
   height: 120px;
 }
 #HEIM8 {
   position: relative;
+  top: 100px;
   right: 10px;
   bottom: 20px;
   width: 170px;
@@ -264,6 +269,7 @@
 }
 #HEIM9 {
   position: relative;
+  top: 100px;
   left: 180px;
   bottom: 10px;
   width: 120px;
@@ -274,4 +280,9 @@
 .testimonial-image {
   width: 400px;
   height: 400px;
+}
+
+
+.HomeFooter  { 
+margin-top: 250px;
 }
