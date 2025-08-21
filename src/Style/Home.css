@@ -147,9 +147,11 @@
   margin: 0 0.3rem;
 }
 
-.testimonial-image img {
-  width: 88%;
-  height: 88%;
+.testimonial-image #BoI {
+  position: relative;
+  bottom: 50px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   transform: translate(5%) scale(1.4);
 }

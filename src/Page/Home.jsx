@@ -34,17 +34,14 @@ function Home() {
 
    // Bottom Left Image
     const moveX6 = useTransform(scrollYProgress, [0, 0.5, 1], [-150, 150, -150]);
-   const moveX62 = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 200, -200]);
+    const moveX62 = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 200, -200]);
+    const moveX7 = useTransform(scrollYProgress, [0, 0.5, 1], [280, 150, 280]);
+    const moveX72 = useTransform(scrollYProgress, [0, 0.5, 1], [200, -100, 200]);
 
-   // Body Right Image
- const moveX7 = useTransform(scrollYProgress, [0, 0.4, 1], [250, 150, 250]);
-
-// العنصر الثاني يتحرك من اليمين (200) إلى اليسار (-200) ثم يرجع لليمين (200)
-const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
+      const rotateLeft4 = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
-    <section ref={targetRef} className="home-section">
-      
+    <section ref={targetRef} className="home-section">   
       {/* Header Section */}
       <div className="HomeHeaderImage">
         <div className="HeaderLeftImages">
@@ -137,7 +134,9 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
           <motion.img 
           style={{x:moveX7}}
           id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
-          <img id="HEIM8" src="../../src/HomeImage/HO18.png" alt="Tahiyati" />
+          <motion.img 
+          style={{x:moveX72}}
+          id="HEIM8" src="../../src/HomeImage/HO18.png" alt="Tahiyati" />
         </div>
       </div>
 
@@ -157,7 +156,9 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
           </p>
         </div>
         <div className="testimonial-image">
-          <img src="../../src/HomeImage/HO55.png" alt="User Testimonial" />
+          <motion.img 
+           style={{rotate:rotateLeft4}}
+          src="../../src/HomeImage/HO55.png" id="BoI" alt="User Testimonial" />
         </div>
       </div>
 
@@ -169,4 +170,4 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
   );
 }
 
-export default Home;
+export default Home;
