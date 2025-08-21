@@ -32,7 +32,6 @@ function CardShowPage({ food, onClose, onAddToCart }) {
       }
     });
   };
-
   const handleAdd = () => {
     for (let i = 0; i < Count; i++) {
       onAddToCart(food);

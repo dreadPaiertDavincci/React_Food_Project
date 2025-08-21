@@ -8,12 +8,10 @@ import Footer from "../../Componant/Footer";
 import ImageSlider from "../../Componant/ImageSlider";
 function Menu({ cartItems, setCartItems }) {
   const [selectedFood, setSelectedFood] = useState(null);
-
   const [foodcategory, setFoodCategory] = useState("pizza");
   const handleFilterCard = (category) => {
     setFoodCategory(category);
   };
-
   const filterFood = FoodDate.filter((food) => food.category === foodcategory);
   const handleCardClick = (food) => {
     setSelectedFood(food);

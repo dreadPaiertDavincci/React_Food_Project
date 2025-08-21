@@ -3,6 +3,10 @@
   text-align: center;
   margin-top: 100px;
 }
+.menu-header { 
+position: relative;
+  bottom: 50px;
+}
 
 .menu-header h2 {
   font-size: 2rem;
@@ -11,6 +15,7 @@
 }
 
 .menu-header p {
+  
   color: #666;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;

@@ -1,17 +1,6 @@
 import "../Style/Home.css";
 import HomeCard from "../../Componant/HomeCard";
 import Footer from "../../Componant/Footer";
-import "../Style/Footer.css";
-function Home() {
-  return (
-    <section className="home-section">
-      <div className="HomeContinar">
-        <div className="HomeText">
-          <p className="highlight-text">
-            Take a taste
-            <p> Come join us. </p>import "../Style/Home.css";
-import HomeCard from "../../Componant/HomeCard";
-import Footer from "../../Componant/Footer";
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import "../Style/Footer.css";
@@ -48,15 +37,15 @@ function Home() {
    const moveX62 = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 200, -200]);
 
    // Body Right Image
- const moveX7 = useTransform(scrollYProgress, [0, 0.4, 1], [250, 150, 250]);
+  const moveX7 = useTransform(scrollYProgress, [0, 0.5, 1], [150, 0, 150]);
+ const moveX72 = useTransform(scrollYProgress, [0, 0.5, 1], [0, -200, 0]);
 
-// العنصر الثاني يتحرك من اليمين (200) إلى اليسار (-200) ثم يرجع لليمين (200)
-const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
+// العنصر الآخر يتحرك من مكانه (0) لليسار (-200) ثم يرجع لليمين (0)
+// العنصر الثاني: يبدأ من اليسار (-200px)، يذهب لليمين (200px)، ثم يرجع لليسار (-200px)
+
 
   return (
-    <section ref={targetRef} className="home-section">
-      
-      {/* Header Section */}
+    <section className="home-section">
       <div className="HomeHeaderImage">
         <div className="HeaderLeftImages">
           <motion.img
@@ -87,7 +76,7 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
         <div className="HomeText">
           <p className="highlight-text">
             Take a taste
-            <p>Come join us.</p>
+            <p> Come join us. </p>
           </p>
           <p className="dark-text">Life is so endlessly delicious.</p>
           <p>
@@ -114,19 +103,8 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
         </div>
       </div>
 
-      {/* Body Images */}
-      <div className="BodyImageContinar">
-        <div className="BodImageLeft">
-          <motion.img
-            style={{ x: moveX4 }}
-            id="HEIM4"
-            src="../../src/HomeImage/HO9.png"
-            alt="img"
-          />
-        </div>
-        <div className="BodImageRight">
-          <motion.img style={{x:moveX5}} id="HEIM5" src="../../src/HomeImage/HO21.png" alt="img" />
-        </div>
+      <div className ="BodyImageContinar">
+
       </div>
 
       {/* Home Cards */}
@@ -134,25 +112,10 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
         <HomeCard />
       </div>
 
-      {/* Bottom Images */}
       <div className="CardBottomImagesContinar">
-        <div className="BotLeft">
-          <motion.img 
-           style={{x:moveX6}}
-          id="HEIM6" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
-          <motion.img 
-          style={{x:moveX62}}
-          id="HEIM7" src="../../src/HomeImage/HO16.png" alt="Tahiyati" />
-        </div>
-        <div className="BotRight">
-          <motion.img 
-          style={{x:moveX7}}
-          id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
-          <img id="HEIM8" src="../../src/HomeImage/HO18.png" alt="Tahiyati" />
-        </div>
+        
       </div>
 
-      {/* Testimonials */}
       <div className="testimonial-container">
         <div className="testimonial-text">
           <h2>Let's see what other says</h2>
@@ -176,53 +139,6 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
         <div className="HomeFooter">
         <Footer />  
       </div> 
-    </section>
-  );
-}
-
-export default Home;
-          </p>
-          <p className="dark-text">Life is so endlessly delicious.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            nesciunt recusandae cumque voluptates eius ratione cum rem voluptate
-            unde tenetur! Sunt minima eos saepe debitis beatae illum ipsa
-          </p>
-          <div className="HiddenButton4">Contact Us</div>
-        </div>
-
-        <div className="HomeImage">
-          <img src="/home.jpg" alt="img" />
-        </div>
-      </div>
-
-      <div className="HomeCardContainer">
-        <HomeCard />
-      </div>
-
-     
-      <div className="testimonial-container">
-        <div className="testimonial-text">
-          <h2>Let's see what other says</h2>
-          <p className="subtitle">Please serve yourself without any hesitate</p>
-          <p className="quote">
-            <span className="quote-mark">“</span>
-            I'm currently on the tour with Paula Abdul and while we were
-            performing in town I came across your raw chocolate fudge at Whole
-            Foods, OMG!! I was nice enough to share it with Paula Abdul, the
-            Physical therapist and the glam squad. Of course they all agreed
-            with me! So glad we are coming back next week
-            <span className="quote-mark">”</span>
-          </p>
-        </div>
-        <div className="testimonial-image">
-          <img src="/home1.jpg" alt="User Testimonial" />
-        </div>
-      </div>
-
-      <div>
-        <Footer />
-      </div>
     </section>
   );
 }
