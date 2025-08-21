@@ -169,4 +169,4 @@ const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
   );
 }
 
-export default Home;
+export default Home;
