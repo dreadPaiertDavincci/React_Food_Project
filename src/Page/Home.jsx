@@ -1,27 +1,73 @@
 import "../Style/Home.css";
 import HomeCard from "../../Componant/HomeCard";
 import Footer from "../../Componant/Footer";
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import "../Style/Footer.css";
-function Home() {
-  return (
-    <section className="home-section">
-      <div className="HomeHeaderImage">
 
+function Home() {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Header Left Image
+  const moveX1 = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  const fastX1 = useSpring(moveX1, { stiffness: 200, damping: 30 });
+  const moveY1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+
+  // Header Right Images
+  const moveX2 = useTransform(scrollYProgress, [0, 1], [0, 400]);
+  const fastX2 = useSpring(moveX2, { stiffness: 200, damping: 30 });
+  const moveX3 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
+  // Body Left Image
+  const moveX4 = useTransform(scrollYProgress, [0, 1], [-200, 200]); // يسار
+  const fastX4 = useSpring(moveX4, { stiffness: 300, damping: 30 });
+
+  // Body Right Image
+  const moveX5 = useTransform(scrollYProgress, [0, 1], [100, -200]); // يسار
+  const fastX5 = useSpring(moveX5, { stiffness: 300, damping: 30 });
+  // Rotations for Home Images
+  const rotateRight = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const rotateLeft = useTransform(scrollYProgress, [0, 1], [0, -360]);
+
+  return (
+    <section ref={targetRef} className="home-section">
+      
+      {/* Header Section */}
+      <div className="HomeHeaderImage">
         <div className="HeaderLeftImages">
-          <img id="HEIM" src="../../src/HomeImage/HO2.png" alt="Tahiyati" />
+          <motion.img
+            style={{ x: fastX1, y: moveY1 }}
+            id="HEIM"
+            src="../../src/HomeImage/HO2.png"
+            alt="Tahiyati"
+          />
         </div>
 
         <div className="HeaderRightImages">
-          <img id="HEIM2" src="../../src/HomeImage/HO4.png" alt="Tahiyati" />
-          <img id="HEIM3" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
+          <motion.img
+            style={{ x: fastX2 }}
+            id="HEIM2"
+            src="../../src/HomeImage/HO4.png"
+            alt="Tahiyati"
+          />
+          <motion.img
+            style={{ x: moveX3 }}
+            id="HEIM3"
+            src="../../src/HomeImage/HO11.png"
+            alt="Tahiyati"
+          />
         </div>
-
       </div>
+
       <div className="HomeContinar">
         <div className="HomeText">
           <p className="highlight-text">
             Take a taste
-            <p> Come join us. </p>
+            <p>Come join us.</p>
           </p>
           <p className="dark-text">Life is so endlessly delicious.</p>
           <p>
@@ -33,41 +79,54 @@ function Home() {
         </div>
 
         <div className="HomeImage">
-          <img src="../../src/HomeImage/HO20.png" id="HeaderHomImage" alt="img" />
-          <img src="../../src/HomeImage/HO3.png" id="HeaderHomImage2" alt="img" />
+          <motion.img
+            style={{ rotate: rotateRight }}
+            src="../../src/HomeImage/HO20.png"
+            id="HeaderHomImage"
+            alt="img"
+          />
+          <motion.img
+            style={{ rotate: rotateLeft }}
+            src="../../src/HomeImage/HO3.png"
+            id="HeaderHomImage2"
+            alt="img"
+          />
         </div>
       </div>
 
-      <div className ="BodyImageContinar">
+      {/* Body Images */}
+      <div className="BodyImageContinar">
         <div className="BodImageLeft">
-           <img id="HEIM4" src="../../src/HomeImage/HO9.png"  alt="img" />
+          <motion.img
+            style={{ x: fastX4 }}
+            id="HEIM4"
+            src="../../src/HomeImage/HO9.png"
+            alt="img"
+          />
         </div>
-
         <div className="BodImageRight">
-          <img id="HEIM5" src="../../src/HomeImage/HO21.png"  alt="img" />
-
+          <motion.img style={{x:fastX5}} id="HEIM5" src="../../src/HomeImage/HO21.png" alt="img" />
         </div>
-        
       </div>
 
+      {/* Home Cards */}
       <div className="HomeCardContainer">
         <HomeCard />
       </div>
 
+      {/* Bottom Images */}
       <div className="CardBottomImagesContinar">
-
         <div className="BotLeft">
           <img id="HEIM6" src="../../src/HomeImage/HO11.png" alt="Tahiyati" />
           <img id="HEIM7" src="../../src/HomeImage/HO16.png" alt="Tahiyati" />
         </div>
-
         <div className="BotRight">
           <img id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
           <img id="HEIM8" src="../../src/HomeImage/HO18.png" alt="Tahiyati" />
         </div>
-
       </div>
 
+      {/* Testimonials */}
       <div className="testimonial-container">
         <div className="testimonial-text">
           <h2>Let's see what other says</h2>
@@ -87,9 +146,9 @@ function Home() {
         </div>
       </div>
 
-      <div>
-        <Footer />
-      </div>
+      {/* Footer */}
+      <Footer />
+
     </section>
   );
 }
