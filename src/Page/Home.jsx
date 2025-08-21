@@ -37,12 +37,10 @@ function Home() {
    const moveX62 = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 200, -200]);
 
    // Body Right Image
-  const moveX7 = useTransform(scrollYProgress, [0, 0.5, 1], [150, 0, 150]);
- const moveX72 = useTransform(scrollYProgress, [0, 0.5, 1], [0, -200, 0]);
+ const moveX7 = useTransform(scrollYProgress, [0, 0.4, 1], [250, 150, 250]);
 
-// العنصر الآخر يتحرك من مكانه (0) لليسار (-200) ثم يرجع لليمين (0)
-// العنصر الثاني: يبدأ من اليسار (-200px)، يذهب لليمين (200px)، ثم يرجع لليسار (-200px)
-
+// العنصر الثاني يتحرك من اليمين (200) إلى اليسار (-200) ثم يرجع لليمين (200)
+const moveX72 = useTransform(scrollYProgress, [0, 0.4, 1], [200, -200, 200]);
 
   return (
     <section ref={targetRef} className="home-section">
