@@ -37,7 +37,12 @@ function Home() {
    const moveX62 = useTransform(scrollYProgress, [0, 0.5, 1], [-200, 200, -200]);
 
    // Body Right Image
-   const moveX7 = useTransform(scrollYProgress, [0, 0.4, 1], [150, -70,180]); 
+  const moveX7 = useTransform(scrollYProgress, [0, 0.5, 1], [150, 0, 150]);
+ const moveX72 = useTransform(scrollYProgress, [0, 0.5, 1], [0, -200, 0]);
+
+// العنصر الآخر يتحرك من مكانه (0) لليسار (-200) ثم يرجع لليمين (0)
+// العنصر الثاني: يبدأ من اليسار (-200px)، يذهب لليمين (200px)، ثم يرجع لليسار (-200px)
+
 
   return (
     <section ref={targetRef} className="home-section">
@@ -131,7 +136,9 @@ function Home() {
           id="HEIM7" src="../../src/HomeImage/HO16.png" alt="Tahiyati" />
         </div>
         <div className="BotRight">
-          <img id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
+          <motion.img 
+          style={{x:moveX7}}
+          id="HEIM9" src="../../src/HomeImage/HO6.png" alt="Tahiyati" />
           <img id="HEIM8" src="../../src/HomeImage/HO18.png" alt="Tahiyati" />
         </div>
       </div>
