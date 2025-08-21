@@ -15,8 +15,15 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 function AnimatedRoutes({ cartItems, setCartItems }) {
   const location = useLocation();
   return (
@@ -90,11 +97,13 @@ function AnimatedRoutes({ cartItems, setCartItems }) {
     </AnimatePresence>
   );
 }
+
 function App() {
   const [cartItems, setCartItems] = useState([]);
   return (
     <Router>
       <NavBar cartItems={cartItems} setCartItems={setCartItems} />
+      <ScrollToTop /> 
       <AnimatedRoutes cartItems={cartItems} setCartItems={setCartItems} />
     </Router>
   );
