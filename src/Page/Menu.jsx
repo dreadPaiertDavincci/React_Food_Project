@@ -134,7 +134,7 @@ function Menu({ cartItems, setCartItems }) {
         onAddToCart={handleAddToCart}
       />
 
-      <div>
+      <div className="menuAbout">
         <Footer />
       </div>
     </section>

@@ -144,7 +144,7 @@ function Contact() {
         </div>
       </div>
 
-      <div>
+      <div className="contactFooter">
         <Footer />
       </div>
     </section>

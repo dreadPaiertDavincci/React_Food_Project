@@ -47,49 +47,25 @@ function ImageSlider() {
           aria-label="Slide 6"
         ></button>
       </div>
+
       <div className="carousel-inner">
-       
-        <div className="carousel-item" data-bs-interval="2500">
-          <img
-            src="../public/Images/Men2.jpg"
-            id="IMSL"
-            className="d-block w-100"
-            alt="Men2"
-          />
+        <div className="carousel-item active" data-bs-interval="2500">
+          <img src="/Images/Men2.jpg" id="IMSL" className="d-block w-100" alt="Men2" />
         </div>
         <div className="carousel-item" data-bs-interval="2500">
-          <img
-            src="../public/Images/Men4.jpg"
-            id="IMSL"
-            className="d-block w-100"
-            alt="Men4"
-          />
+          <img src="/Images/Men4.jpg" id="IMSL" className="d-block w-100" alt="Men4" />
         </div>
         <div className="carousel-item" data-bs-interval="2500">
-          <img
-            src="../public/Images/Men3.jpg"
-            id="IMSL"
-            className="d-block w-100"
-            alt="Men3"
-          />
+          <img src="/Images/Men3.jpg" id="IMSL" className="d-block w-100" alt="Men3" />
         </div>
         <div className="carousel-item" data-bs-interval="2500">
-          <img
-            src="../public/Images/Men5.jpg"
-            id="IMSL"
-            className="d-block w-100"
-            alt="Men5"
-          />
+          <img src="/Images/Men5.jpg" id="IMSL" className="d-block w-100" alt="Men5" />
         </div>
         <div className="carousel-item" data-bs-interval="2500">
-          <img
-            src="../public/Images/Men6.jpg"
-            id="IMSL"
-            className="d-block w-100"
-            alt="Men6"
-          />
+          <img src="/Images/Men6.jpg" id="IMSL" className="d-block w-100" alt="Men6" />
         </div>
       </div>
+
       <button
         className="carousel-control-prev"
         type="button"
@@ -99,6 +75,7 @@ function ImageSlider() {
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
+
       <button
         className="carousel-control-next"
         type="button"

@@ -63,7 +63,9 @@ function Blog() {
           ))}
         </AnimatePresence>
       </div>
-      <div>
+
+
+      <div className="BlogFooter">
         <Footer />
       </div>
     </section>
